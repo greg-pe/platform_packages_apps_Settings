@@ -32,7 +32,7 @@ import com.android.internal.app.AlertController;
 import android.content.DialogInterface;
 
 /**
- * The "dialog" that shows from "Safety information" in the Settings app.
+ * The "dialog" that shows from "Project Elite Changelog" in the Settings app.
  */
 public class ProjectEliteActivity extends AlertActivity 
         implements DialogInterface.OnCancelListener, DialogInterface.OnClickListener {
