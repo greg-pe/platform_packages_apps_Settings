@@ -1598,9 +1598,9 @@
     <!-- About phone settings screen, Safety Legal dialog title until the link is fully loaded -->
     <string name="settings_safetylegal_activity_loading">Loading\u2026</string>
 
-     <string name="settings_projectelite_activity_title">Project Elite Info</string>
+     <string name="settings_projectelite_activity_title">Project Elite</string>
      <!-- About phone settings, Project Elite-->
-    <string name="settings_projectelite_title">Elite Changelog</string>
+    <string name="settings_projectelite_title">Elite Information</string>
       <!-- About phone settings screen, Project Elite dialog message when data network is not connected -->
     <string name="settings_projectelite_activity_unreachable">Your phone is not connected to a data service. To view this information now, go to %s from any computer connected to the Internet.</string>
     <!-- About phone settings screen, Safety Legal dialog title until the link is fully loaded -->
