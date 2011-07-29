@@ -116,11 +116,6 @@
     <string name="bluetooth_notif_message" msgid="5381418499788668724">"Selecteer dit om te koppelen met "</string>
     <string name="device_picker" msgid="8721012448931226323">"Apparaatkiezer van Bluetooth"</string>
     <string name="bluetooth_permission_request" msgid="1523129741266262748">"Machtigingsverzoek voor Bluetooth"</string>
-<<<<<<< HEAD
-    <string name="bluetooth_ask_enablement" msgid="2342558978033892004">"Een toepassing probeert Bluetooth in te schakelen. Wilt u dit toestaan?"</string>
-    <string name="bluetooth_ask_discovery" msgid="669870705606180872">"Een toepassing probeert uw telefoon <xliff:g id="TIMEOUT">%1$d</xliff:g> seconden zichtbaar te maken voor andere Bluetooth-apparaten. Wilt u dit toestaan?"</string>
-    <string name="bluetooth_ask_enablement_and_discovery" msgid="7220210326619399542">"Een toepassing probeert Bluetooth in te schakelen en uw telefoon <xliff:g id="TIMEOUT">%1$d</xliff:g> seconden zichtbaar te maken voor andere apparaten. Wilt u dit toestaan?"</string>
-=======
     <string name="bluetooth_ask_enablement" msgid="2342558978033892004">"Een app probeert Bluetooth in te schakelen. Wilt u dit toestaan?"</string>
     <string name="bluetooth_ask_discovery" msgid="669870705606180872">"Een app probeert uw telefoon <xliff:g id="TIMEOUT">%1$d</xliff:g> seconden zichtbaar te maken voor andere Bluetooth-apparaten. Wilt u dit toestaan?"</string>
     <string name="bluetooth_ask_lasting_discovery" msgid="3413855805411554871">"Een app op uw telefoon vraagt toestemming uw tablet altijd vindbaar te maken voor andere Bluetooth-apparaten. Wilt u dit toestaan?"</string>

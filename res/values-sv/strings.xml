@@ -116,11 +116,6 @@
     <string name="bluetooth_notif_message" msgid="5381418499788668724">"Välj att parkoppla med "</string>
     <string name="device_picker" msgid="8721012448931226323">"Bluetooth-enhetsväljare"</string>
     <string name="bluetooth_permission_request" msgid="1523129741266262748">"Begäran om Bluetooth-behörighet"</string>
-<<<<<<< HEAD
-    <string name="bluetooth_ask_enablement" msgid="2342558978033892004">"Ett program i telefonen begär tillåtelse att aktivera Bluetooth. Vill du tillåta det?"</string>
-    <string name="bluetooth_ask_discovery" msgid="669870705606180872">"Ett program i telefonen begär tillåtelse att göra telefonen synlig för andra Bluetooth-enheter i <xliff:g id="TIMEOUT">%1$d</xliff:g> sekunder. Vill du tillåta det?"</string>
-    <string name="bluetooth_ask_enablement_and_discovery" msgid="7220210326619399542">"Ett program i telefonen begär tillåtelse att aktivera Bluetooth och göra telefonen synlig för andra enheter i <xliff:g id="TIMEOUT">%1$d</xliff:g> sekunder. Vill du tillåta det?"</string>
-=======
     <string name="bluetooth_ask_enablement" msgid="2342558978033892004">"En app i telefonen begär tillåtelse att aktivera Bluetooth. Vill du tillåta det?"</string>
     <string name="bluetooth_ask_discovery" msgid="669870705606180872">"En app i telefonen begär tillåtelse att göra telefonen synlig för andra Bluetooth-enheter i <xliff:g id="TIMEOUT">%1$d</xliff:g> sekunder. Vill du tillåta det?"</string>
     <string name="bluetooth_ask_lasting_discovery" msgid="3413855805411554871">"En app begär tillåtelse att göra telefonen ständigt synlig för andra Bluetooth-enheter. Vill du tillåta det?"</string>
