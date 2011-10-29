@@ -265,11 +265,7 @@
     <string name="unlock_set_unlock_pin_title" msgid="5846029709462329515">"PIN"</string>
     <string name="unlock_set_unlock_pin_summary" msgid="4131169672844263316">"PIN numérico para desbloquear pantalla"</string>
     <string name="unlock_set_unlock_password_title" msgid="8775603825675090937">"Contraseña"</string>
-<<<<<<< HEAD
-    <string name="unlock_set_unlock_password_summary" msgid="4623254789833899286">"Contraseña para desbloq pantalla"</string>
-=======
     <string name="unlock_set_unlock_password_summary" msgid="4623254789833899286">"Contraseña para desbloquear pantalla"</string>
->>>>>>> remotes/aosp/gingerbread
     <string name="unlock_set_unlock_disabled_summary" msgid="736557879526940324">"Inhabilitado por administrador remoto"</string>
     <string name="unlock_disable_lock_title" msgid="1427036227416979120">"Desactivar bloqueo pantalla"</string>
     <string name="unlock_disable_lock_pattern_summary" msgid="6801602880568869201">"Eliminar patrón de desbloqueo"</string>
@@ -597,10 +593,7 @@
     <string name="apn_auth_type_chap" msgid="3369626283789068360">"CHAP"</string>
     <string name="apn_auth_type_pap_chap" msgid="9102343063036134541">"PAP o CHAP"</string>
     <string name="apn_type" msgid="469613123902220544">"Tipo de APN"</string>
-<<<<<<< HEAD
-=======
     <string name="apn_protocol" msgid="3272222921649348640">"Protocolo APN"</string>
->>>>>>> remotes/aosp/gingerbread
     <string name="menu_delete" msgid="6981294422841124659">"Eliminar APN"</string>
     <string name="menu_new" msgid="3014205883303921729">"APN nuevo"</string>
     <string name="menu_save" msgid="8109345640668285399">"Guardar"</string>

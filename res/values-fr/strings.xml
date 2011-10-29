@@ -1123,11 +1123,7 @@
     <string name="credentials_confirm_password" msgid="4732250000633424345">"Confirmer le nouveau mot de passe :"</string>
     <string name="credentials_first_time_hint" msgid="1567821077545346039">"Définissez un mot de passe pour le stockage des identifiants (au moins 8 caractères)."</string>
     <string name="credentials_wrong_password" msgid="7525192410790152041">"Veuillez entrer le mot de passe approprié."</string>
-<<<<<<< HEAD
-    <string name="credentials_reset_warning" msgid="6392481296673345268">"Entrez le mot de passe approprié. Il vous reste un essai avant que le stockage des identifiants ne soit effacé."</string>
-=======
     <string name="credentials_reset_warning" msgid="6392481296673345268">"Entrez le mot de passe approprié. Il vous reste un essai avant que les identifiants stockés ne soient effacés."</string>
->>>>>>> remotes/aosp/gingerbread
     <string name="credentials_reset_warning_plural" msgid="454828369803055270">"Entrez le mot de passe approprié. Il vous reste <xliff:g id="NUMBER">%1$d</xliff:g> essais avant que les identifiants stockés ne soient effacés."</string>
     <string name="credentials_passwords_mismatch" msgid="5288565139590031733">"Les mots de passe ne concordent pas."</string>
     <string name="credentials_passwords_empty" msgid="8647631321684363549">"Vous devez entrer un mot de passe et le confirmer."</string>
