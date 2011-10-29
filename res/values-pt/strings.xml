@@ -110,7 +110,7 @@
     <string name="bluetooth_pairing" msgid="1426882272690346242">"Pareando…"</string>
     <string name="bluetooth_paired" msgid="1247541089000057726">"Pareado, mas não conectado"</string>
     <string name="bluetooth_device" msgid="6873461446424952003">"viva-voz/fone de ouvido"</string>
-    <string name="progress_scanning" msgid="3760897655335759141">"Verificando"</string>
+    <string name="progress_scanning" msgid="3760897655335759141">"Procurando"</string>
     <string name="bluetooth_notif_ticker" msgid="4726721390078512173">"Solicitação de pareamento Bluetooth"</string>
     <string name="bluetooth_notif_title" msgid="2485175521845371514">"Solicitação de pareamento"</string>
     <string name="bluetooth_notif_message" msgid="5381418499788668724">"Selecione para parear "</string>
@@ -122,6 +122,9 @@
     <string name="bluetooth_ask_enablement_and_discovery" msgid="7220210326619399542">"Um aplicativo no seu telefone está solicitando permissão para ativar o Bluetooth e tornar o seu telefone detectável por outros dispositivos por <xliff:g id="TIMEOUT">%1$d</xliff:g> segundos. Deseja fazer isso?"</string>
     <string name="bluetooth_ask_enablement_and_lasting_discovery" msgid="7471195931669103553">"Um aplicativo em seu telefone está solicitando permissão para ativar o Bluetooth e tornar o seu telefone detectável por outros dispositivos. Deseja fazer isso?"</string>
     <string name="bluetooth_turning_on" msgid="3107102168379705771">"Ativando Bluetooth…"</string>
+    <string name="bluetooth_connection_permission_request" msgid="4747918249032890077">"Solicitação de conexão Bluetooth"</string>
+    <string name="bluetooth_connection_notif_message" msgid="1833221950512058309">"Toque para conectar-se ao \"<xliff:g id="DEVICE_NAME">%1$s</xliff:g>\""</string>
+    <string name="bluetooth_connection_dialog_text" msgid="8455427559949998023">"Deseja conectar-se ao \"<xliff:g id="DEVICE_NAME">%1$s</xliff:g>\"?"</string>
     <string name="date_and_time" msgid="4114084177056654663">"Configurações de data e hora"</string>
     <string name="date_time_12_hour_sample" msgid="3259617262618020574">"1:00 pm"</string>
     <string name="date_time_24_hour_sample" msgid="8916857570746212357">"13:00"</string>
@@ -340,9 +343,7 @@
     <string name="bluetooth_dock_settings_remember" msgid="5551459057010609115">"Lembrar configurações"</string>
     <string name="nfc_quick_toggle_title" msgid="6769159366307299004">"NFC"</string>
     <string name="nfc_quick_toggle_summary" msgid="1988408027741447231">"Usar comunicação a curta distância para ler e trocar tags"</string>
-    <!-- no translation found for nfc_toggle_error (2233172102497535522) -->
-    <!-- no translation found for nfc_toggle_error (8998642457947607263) -->
-    <skip />
+    <string name="nfc_toggle_error" msgid="2233172102497535522">"Ocorreu um erro."</string>
     <string name="wifi_quick_toggle_title" msgid="874495178395350104">"Wi-Fi"</string>
     <string name="wifi_quick_toggle_summary" msgid="1047950931623694366">"Ativar Wi-Fi"</string>
     <string name="wifi_settings" msgid="4746946030627213196">"Configurações de Wi-Fi"</string>
@@ -413,7 +414,7 @@
     <string name="wifi_tether_settings_subtext" msgid="8064755682383367008">"Configurar e gerenciar ponto de acesso Wi-Fi portátil"</string>
     <string name="wifi_tether_settings_title" msgid="3749063216348284432">"Configurações do ponto de acesso Wi-Fi portátil"</string>
     <string name="wifi_tether_configure_ap_text" msgid="3474995108398156258">"Configurar ponto de acesso Wi-Fi"</string>
-    <string name="wifi_tether_configure_subtext" msgid="1927454307836232128">"ponto de acesso Wi-Fi portátil <xliff:g id="NETWORK_SSID">%1$s</xliff:g> <xliff:g id="NETWORK_SECURITY">%2$s</xliff:g>"</string>
+    <string name="wifi_tether_configure_subtext" msgid="1927454307836232128">"Ponto de acesso Wi-Fi portátil <xliff:g id="NETWORK_SSID">%1$s</xliff:g> <xliff:g id="NETWORK_SECURITY">%2$s</xliff:g>"</string>
     <string name="wifi_tether_configure_ssid_default" msgid="8467525402622138547">"Ponto de acesso Android"</string>
     <string name="sound_settings_title" msgid="8735891486683305886">"Som"</string>
     <string name="display_settings_title" msgid="1708697328627382561">"Tela"</string>
@@ -449,8 +450,8 @@
     <string name="sound_effects_enable_summary_on" msgid="6154141289879491329">"Reproduzir som ao fazer uma seleção de tela"</string>
     <string name="sound_effects_enable_summary_off" msgid="3447739581759560125">"Reproduzir som ao fazer uma seleção de tela"</string>
     <string name="lock_sounds_enable_title" msgid="1575990840389107141">"Sons de bloqueio de tela"</string>
-    <string name="lock_sounds_enable_summary_on" msgid="145741024028391473">"Reproduzir sons ao bloquear e desbloquear a tela."</string>
-    <string name="lock_sounds_enable_summary_off" msgid="8481243116223542804">"Reproduzir sons ao bloquear e desbloquear a tela."</string>
+    <string name="lock_sounds_enable_summary_on" msgid="145741024028391473">"Reproduzir sons ao bloquear e desbloquear a tela"</string>
+    <string name="lock_sounds_enable_summary_off" msgid="8481243116223542804">"Reproduzir sons ao bloquear e desbloquear a tela"</string>
     <string name="haptic_feedback_enable_title" msgid="6311736559245411290">"Retorno com vibração"</string>
     <string name="haptic_feedback_enable_summary_on" msgid="1875779656524793053">"Vibrar ao pressionar teclas e em algumas interações com a interface"</string>
     <string name="haptic_feedback_enable_summary_off" msgid="7287885436963105314">"Vibrar ao pressionar teclas e em algumas interações com a interface de usuário"</string>
@@ -523,6 +524,7 @@
     <string name="storage_settings_summary" product="default" msgid="9176693537325988610">"Desmontar o cartão SD, visualizar armazenamento disponível"</string>
     <string name="status_number" msgid="5123197324870153205">"Meu número de telefone"</string>
     <string name="status_min_number" msgid="3519504522179420597">"MIN"</string>
+    <string name="status_msid_number" msgid="909010114445780530">"MSID"</string>
     <string name="status_prl_version" msgid="8499039751817386529">"Versão PRL"</string>
     <string name="status_meid_number" msgid="1751442889111731088">"MEID"</string>
     <string name="status_network_type" msgid="3279383550222116235">"Tipo de rede móvel"</string>
@@ -548,7 +550,7 @@
     <string name="sd_insert_summary" product="default" msgid="2048640010381803841">"Insira um cartão SD para conexão"</string>
     <string name="sd_mount" product="nosdcard" msgid="8966695015677343116">"Conectar armazenam. USB"</string>
     <string name="sd_mount" product="default" msgid="5940523765187704135">"Conectar cartão SD"</string>
-    <!-- outdated translation 6733254203291665551 -->     <string name="sd_mount_summary" product="nosdcard" msgid="1794150364965145726">"Conectar armaz. USB interno"</string>
+    <string name="sd_mount_summary" product="nosdcard" msgid="1794150364965145726">"Montar o armazenamento USB"</string>
     <string name="sd_mount_summary" product="default" msgid="4936591681679097699">"Conectar o cartão SD"</string>
     <string name="sd_format" product="nosdcard" msgid="2148179271623099054">"Apagar armazenamento USB"</string>
     <string name="sd_format" product="default" msgid="2576054280507119870">"Apagar cartão SD"</string>
@@ -591,6 +593,7 @@
     <string name="apn_auth_type_chap" msgid="3369626283789068360">"CHAP"</string>
     <string name="apn_auth_type_pap_chap" msgid="9102343063036134541">"PAP ou CHAP"</string>
     <string name="apn_type" msgid="469613123902220544">"Tipo APN"</string>
+    <string name="apn_protocol" msgid="3272222921649348640">"Protocolo APN"</string>
     <string name="menu_delete" msgid="6981294422841124659">"Excluir APN"</string>
     <string name="menu_new" msgid="3014205883303921729">"Novo APN"</string>
     <string name="menu_save" msgid="8109345640668285399">"Salvar"</string>
@@ -610,7 +613,7 @@
     <string name="erase_external_storage" product="nosdcard" msgid="969364037450286809">"Apagar armazenamento USB"</string>
     <string name="erase_external_storage" product="default" msgid="1397239046334307625">"Apagar cartão SD"</string>
     <string name="erase_external_storage_description" product="nosdcard" msgid="1657838142707381027">"Ap. arm. USB, como mús. e fot."</string>
-    <string name="erase_external_storage_description" product="default" msgid="8100175974635894073">"Ap. cart. SD, como mús. e fot."</string>
+    <string name="erase_external_storage_description" product="default" msgid="8100175974635894073">"Apagar dados do cartão SD"</string>
     <string name="master_clear_button_text" msgid="7550632653343157971">"Redefinir telefone"</string>
     <string name="master_clear_final_desc" msgid="6917971132484622696">"Apagar todas as informações pessoais e os aplicativos dos quais você fez download? É impossível reverter essa ação."</string>
     <string name="master_clear_final_button_text" msgid="5390908019019242910">"Apagar tudo"</string>
@@ -635,7 +638,7 @@
     <string name="call_settings_summary" msgid="7291195704801002886">"Configurar correio voz, encaminhamento, espera etc."</string>
     <string name="tether_settings_title_usb" msgid="4315031513434087777">"Vínculo"</string>
     <string name="tether_settings_title_wifi" msgid="3277144155960302049">"Ponto de acesso portátil"</string>
-    <string name="tether_settings_title_both" msgid="2734066355556891504">"Vínculo e ponto de acesso portátil"</string>
+    <string name="tether_settings_title_both" msgid="2734066355556891504">"Vínculo e p. de acesso portátil"</string>
     <string name="tether_settings_summary_usb" msgid="3562431455625637370">"Compartilhar a conexão de dados móveis do seu telefone via USB"</string>
     <string name="tether_settings_summary_wifi" msgid="4690912027002467246">"Compartilhar a conexão de dados móveis do seu telefone como um ponto de acesso Wi-Fi portátil"</string>
     <string name="tether_settings_summary_both" msgid="7460063951190682635">"Compartilhar a conexão de dados móveis do seu telefone via USB ou como ponto de acesso Wi-Fi"</string>
@@ -753,10 +756,10 @@
     <string name="filter" msgid="2018011724373033887">"Filtro"</string>
     <string name="filter_dlg_title" msgid="6507663329723966854">"Selecionar as opções de filtro"</string>
     <string name="filter_apps_all" msgid="5142129378749391876">"Todos"</string>
-    <string name="filter_apps_third_party" msgid="7786348047690140979">"Download concluído"</string>
-    <string name="filter_apps_running" msgid="7767071454371350486">"Em execução"</string>
+    <string name="filter_apps_third_party" msgid="7786348047690140979">"Descarregados"</string>
+    <string name="filter_apps_running" msgid="7767071454371350486">"Rodando"</string>
     <string name="filter_apps_onsdcard" product="nosdcard" msgid="4843063154701023349">"Armazenamento USB"</string>
-    <string name="filter_apps_onsdcard" product="default" msgid="1477351142334784771">"No cartão SD"</string>
+    <string name="filter_apps_onsdcard" product="default" msgid="1477351142334784771">"Cartão SD"</string>
     <string name="disabled" msgid="9206776641295849915">"Desativado"</string>
     <string name="no_applications" msgid="5190227407135243904">"Nenhum aplicativo."</string>
     <string name="internal_storage" msgid="1584700623164275282">"Armaz. interno"</string>
@@ -985,13 +988,13 @@
     <string name="recognizer_title" msgid="3231385184559054457">"Reconhecedor de voz"</string>
     <string name="recognizer_settings_title" msgid="6038598099039717232">"Config. do reconhecedor de voz"</string>
     <string name="recognizer_settings_summary" msgid="4472287934134546902">"Configurações para \'<xliff:g id="RECOGNIZER_NAME">%s</xliff:g>\'"</string>
-    <string name="tts_settings" msgid="8186971894801348327">"Configurações da Conversão de texto em voz"</string>
-    <string name="tts_settings_title" msgid="4182348653053000933">"Configurações da Conversão de texto em voz"</string>
+    <string name="tts_settings" msgid="8186971894801348327">"Configurações da conversão de texto em voz"</string>
+    <string name="tts_settings_title" msgid="4182348653053000933">"Configurações da conversão de texto em voz"</string>
     <string name="use_default_tts_settings_title" msgid="1577063839539732930">"Usar minhas config."</string>
     <string name="use_default_tts_settings_summary" msgid="4253502106159206276">"As conf. padrão abaixo substituem as conf. do aplicativo"</string>
     <string name="tts_default_settings_section" msgid="5787915620218907443">"Configurações padrão"</string>
     <string name="tts_default_synth_title" msgid="29467896463371992">"Mecanismo padrão"</string>
-    <string name="tts_default_synth_summary" msgid="6482936537135251690">"Define o mecanismo de síntese de fala a ser usado para texto falado."</string>
+    <string name="tts_default_synth_summary" msgid="6482936537135251690">"Define o mecanismo de síntese de fala a ser usado para texto falado"</string>
     <string name="tts_default_rate_title" msgid="6030550998379310088">"Taxa de fala"</string>
     <string name="tts_default_rate_summary" msgid="4061815292287182801">"Velocidade em que o texto é falado"</string>
     <string name="tts_default_pitch_title" msgid="6135942113172488671">"Frequência do som"</string>
@@ -1145,12 +1148,12 @@
     <string name="privacy_settings_title" msgid="1987089301293213705">"Configurações de privacidade"</string>
     <string name="backup_section_title" msgid="8856083167469467588">"Backup e restauração"</string>
     <string name="personal_data_section_title" msgid="7815209034443782061">"Dados pessoais"</string>
-    <string name="backup_data_title" msgid="1239105919852668016">"Fazer backup dos meus dados"</string>
+    <string name="backup_data_title" msgid="1239105919852668016">"Fazer backup"</string>
     <string name="backup_data_summary" msgid="6515285107793232815">"Dados de aplicativos de backup, senhas da rede Wi-Fi e outras configurações nos servidores do Google"</string>
     <string name="auto_restore_title" msgid="5397528966329126506">"Restauração automática"</string>
     <string name="auto_restore_summary" msgid="83177150536734378">"Caso o aplicativo seja reinstalado, restaurar as configurações ou outros dados de backup"</string>
     <string name="backup_erase_dialog_title" msgid="3438255037256586237">"Backup"</string>
-    <string name="backup_erase_dialog_message" msgid="7766283133557587608">"Tem certeza de que deseja parar de fazer backup das suas senhas da rede Wi-Fi, dos favoritos e de outras configurações e dados de aplicativo e apagar todas as cópias nos servidores do Google?"</string>
+    <string name="backup_erase_dialog_message" msgid="7766283133557587608">"Tem certeza de que deseja interromper backup das suas senhas da rede Wi-Fi, dos favoritos e de outras configurações e dados de aplicativo, e apagar todas as cópias dos servidores do Google?"</string>
     <string name="device_admin_settings_title" msgid="1335557832906433309">"Configurações de administração do dispositivo"</string>
     <string name="active_device_admin_msg" msgid="6930903262612422111">"Administrador do dispositivo"</string>
     <string name="remove_device_admin" msgid="3596845261596451437">"Desativar"</string>
@@ -1165,5 +1168,9 @@
     <string name="sound_category_sound_title" msgid="1488759370067953996">"Geral"</string>
     <string name="sound_category_calls_title" msgid="3688531959256239012">"Chamadas recebidas"</string>
     <string name="sound_category_notification_title" msgid="3502115998790286943">"Notificações"</string>
-    <string name="sound_category_feedback_title" msgid="4399742321363475393">"Comentários"</string>
+    <string name="sound_category_feedback_title" msgid="4399742321363475393">"Retorno"</string>
+    <string name="wimax_settings" msgid="1574837328738396794">"Configurações de 4G"</string>
+    <string name="wimax_settings_summary" msgid="3207355006084135453">"Configure e gerencie a rede e o modem 4G"</string>
+    <string name="status_wimax_mac_address" msgid="8390791848661413416">"Endereço MAC 4G"</string>
+    <string name="additional_system_update_settings_list_item_title" msgid="214987609894661992">"Atualizações adicionais do sistema"</string>
 </resources>

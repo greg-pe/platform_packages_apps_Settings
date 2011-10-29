@@ -37,9 +37,9 @@
     <PreferenceCategory android:title="@string/internal_memory">
         <Preference android:key="memory_internal_size"
             style="?android:attr/preferenceInformationStyle"
-             android:title="@string/memory_size"
-             android:summary="00"/>
-          <Preference android:key="memory_internal_avail"
+            android:title="@string/memory_size"
+            android:summary="00"/>
+        <Preference android:key="memory_internal_avail"
             style="?android:attr/preferenceInformationStyle"
             android:title="@string/memory_available"
             android:summary="00"/>

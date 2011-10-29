@@ -204,7 +204,7 @@ public class QuickLaunchSettings extends PreferenceActivity implements
         return true;
     }
 
-    public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
+    public boolean onItemLongClick(AdapterView parent, View view, int position, long id) {
         
         // Open the clear shortcut dialog
         Preference pref = (Preference) getPreferenceScreen().getRootAdapter().getItem(position);

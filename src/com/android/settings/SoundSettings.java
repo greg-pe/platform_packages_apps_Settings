@@ -119,7 +119,6 @@ public class SoundSettings extends PreferenceActivity implements
                findPreference(KEY_VOLUME_CONTROL_SILENT);
         mVolumeControlSilent.setChecked(Settings.System.getInt(resolver,
                Settings.System.VOLUME_CONTROL_SILENT, 0) == 1);
-
         mDtmfTone = (CheckBoxPreference) findPreference(KEY_DTMF_TONE);
         mDtmfTone.setPersistent(false);
         mDtmfTone.setChecked(Settings.System.getInt(resolver,

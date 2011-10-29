@@ -111,7 +111,7 @@
     <item msgid="9032073376232198148">"Jamais"</item>
   </string-array>
   <string-array name="wifi_signal">
-    <item msgid="2245412278046491293">"Médiocre"</item>
+    <item msgid="2245412278046491293">"Faible"</item>
     <item msgid="5615082285463430971">"Satisfaisante"</item>
     <item msgid="3565079809875324621">"Bonne"</item>
     <item msgid="5702329417707689835">"Excellente"</item>
@@ -149,6 +149,12 @@
     <item msgid="535934025797984365">"CHAP"</item>
     <item msgid="8383098660619805783">"PAP ou CHAP"</item>
   </string-array>
+<<<<<<< HEAD
+=======
+    <!-- no translation found for apn_protocol_entries:0 (4852355456199302715) -->
+    <!-- no translation found for apn_protocol_entries:1 (4394161344888484571) -->
+    <!-- no translation found for apn_protocol_entries:2 (8084938354605535381) -->
+>>>>>>> remotes/aosp/gingerbread
   <string-array name="app_install_location_entries">
     <item msgid="8151497958991952759">"Mémoire interne du mobile"</item>
     <item msgid="3738430123799803530">"Carte SD amovible"</item>

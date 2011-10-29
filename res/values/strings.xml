@@ -966,7 +966,7 @@
 
     <!-- Do not translate. Used for diagnostic screens, precise translation is not necessary
          Wi-Fi Testing on the diagnostic screen-->
-    <string name="testing_wifi_info" translatable="false">Wifi information</string>
+    <string name="testing_wifi_info" translatable="false">Wi-Fi information</string>
     <!-- Do not translate. Used for diagnostic screens, precise translation is not necessary
          Menu item for WifiManager disableNetwork API-->
     <string name="disableNetwork" translatable="false">disableNetwork</string>
@@ -1082,7 +1082,6 @@
    <string name="volume_control_silent_title">Silent state</string>
    <!-- Sound settings screen, setting option summary text -->
    <string name="volume_control_silent_summary">Add a state for complete silence to volume control</string>
-
     <!-- Sound settings screen, setting option name -->
     <string name="notification_sound_title">Notification ringtone</string>
     <!-- Sound settings screen, setting option summary text -->
@@ -1127,11 +1126,11 @@
     <!-- Sound settings screen, setting option summary text when check box is clear -->
     <string name="lock_sounds_enable_summary_off">Play sounds when locking and unlocking the screen</string>
     <!-- Sound settings screen, setting check box label -->
+<<<<<<< HEAD
     <string name="power_sounds_enable_title">Low battery sound</string>
     <!-- Sound settings screen, setting option summary text -->
-   <string name="power_sounds_enable_summary">Play sound with the low battery alert</string>
+    <string name="power_sounds_enable_summary">Play sound with the low battery alert</string>
     <!-- Sound settings screen, setting check box label -->
-
     <string name="haptic_feedback_enable_title">Haptic feedback</string>
     <!-- Sound settings screen, setting option summary text when check box is selected -->
     <string name="haptic_feedback_enable_summary_on">Vibrate when pressing soft keys and on certain UI interactions</string>
@@ -1322,6 +1321,8 @@
     <string name="status_awake_time">Awake time</string>
     <!-- SD card & phone storage settings screen heading. This is displayed above items that pertain to the phone's internal storage  -->
     <string name="internal_memory">Internal storage</string>
+    <!-- SD card & additional storage settings screen heading. This is displayed above items that pertain to the phone's additional storage  -->
+    <string name="additional_memory">Additional storage</string>
     <!-- SD card & phone storage settings screen heading. This is displayed above items that pertain to the SD card [CHAR LIMIT=30] -->
     <string name="sd_memory" product="nosdcard">USB storage</string>
     <!-- SD card & phone storage settings screen heading. This is displayed above items that pertain to the SD card -->
@@ -1627,7 +1628,6 @@
     <string name="settings_projectelite_activity_unreachable">Your phone is not connected to a data service. To view this information now, go to %s from any computer connected to the Internet.</string>
     <!-- About phone settings screen, Safety Legal dialog title until the link is fully loaded -->
     <string name="settings_projectelite_activity_loading">Loading\u2026</string>    
-
     <!-- Lock Pattern settings -->
     <!-- Header on first screen of choose password/PIN flow -->
     <string name="lockpassword_choose_your_password_header">Choose your password</string>
@@ -2158,7 +2158,7 @@ found in the list of installed applications.</string>
 
     <!-- Used to show an amount of time in the form "s seconds" in BatteryHistory -->
     <string name="battery_history_seconds"><xliff:g id="seconds">%1$d</xliff:g>s</string>
-    
+
    <!-- Used to head a list of packages that share a given user id BatteryHistory -->
     <string name="battery_history_packages_sharing_this_uid">Packages sharing this UID:</string>
 
@@ -2736,7 +2736,6 @@ found in the list of installed applications.</string>
     <!-- toast message -->
     <string name="credentials_disabled">Credential storage is disabled.</string>
 
-    
     <string name="possibleButtons">Possible Buttons</string>
     <string name="toggleWifi">Wi-Fi</string>
     <string name="toggleWifiAp">Portable Wi-Fi hotspot</string>
@@ -2817,9 +2816,6 @@ found in the list of installed applications.</string>
     <string name="notConfigured">Not configured. Please add again</string>
 
     <string name="ok">Ok</string>
-
-
-
     <!-- Title of preference group for encrypted filesystem settings -->
     <string name="encrypted_fs_category">Encrypted File System</string>
     <!-- Title of preference to enable/dislable encrypted filesystem -->

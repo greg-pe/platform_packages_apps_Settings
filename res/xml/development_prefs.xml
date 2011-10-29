@@ -21,12 +21,12 @@
         android:key="enable_adb" 
         android:title="@string/enable_adb" 
         android:summary="@string/enable_adb_summary"/>
-      
-    <CheckBoxPreference 
+
+    <CheckBoxPreference
         android:key="adb_notify"
         android:title="@string/adb_notify"
         android:summary="@string/adb_notify_summary"
-         android:dependency="enable_adb" />
+        android:dependency="enable_adb" />
 
     <CheckBoxPreference 
         android:key="keep_screen_on" 

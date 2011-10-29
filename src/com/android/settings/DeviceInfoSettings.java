@@ -53,7 +53,6 @@ public class DeviceInfoSettings extends PreferenceActivity {
     private static final String PROPERTY_URL_PROJECTELITE = "ro.url.projectelite";
     private static final String KEY_UPDATE_SETTING = "additional_system_update_settings";
 
-
     long[] mHits = new long[3];
 
     @Override
@@ -80,7 +79,6 @@ public class DeviceInfoSettings extends PreferenceActivity {
         setStringSummary("build_number", Build.DISPLAY);
         findPreference("kernel_version").setSummary(getFormattedKernelVersion());
         setValueSummary("mod_version", "ro.modversion");
-
         // Remove Safety information preference if PROPERTY_URL_SAFETYLEGAL is not set
         removePreferenceIfPropertyMissing(getPreferenceScreen(), "safetylegal",
                 PROPERTY_URL_SAFETYLEGAL);
@@ -112,10 +110,14 @@ public class DeviceInfoSettings extends PreferenceActivity {
                 Utils.UPDATE_PREFERENCE_FLAG_SET_TITLE_TO_MATCHING_ACTIVITY);
         Utils.updatePreferenceToSpecificActivityOrRemove(this, parentPreference, KEY_CONTRIBUTORS,
                 Utils.UPDATE_PREFERENCE_FLAG_SET_TITLE_TO_MATCHING_ACTIVITY);
+
         // Read platform settings for additional system update setting
         boolean mUpdateSettingAvailable =
                 getResources().getBoolean(R.bool.config_additional_system_update_setting_enable);
 
+        if(mUpdateSettingAvailable == false) {
+            getPreferenceScreen().removePreference(findPreference(KEY_UPDATE_SETTING));
+        }
     }
 
     @Override

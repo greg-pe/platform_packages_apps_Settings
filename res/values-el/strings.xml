@@ -122,6 +122,9 @@
     <string name="bluetooth_ask_enablement_and_discovery" msgid="7220210326619399542">"Μια εφαρμογή στο τηλέφωνό σας ζητά άδεια να ενεργοποιήσει το Bluetooth και να καταστήσει τη συσκευή σας ορατή από άλλες συσκευές για <xliff:g id="TIMEOUT">%1$d</xliff:g> δευτερόλεπτα. Θέλετε να τη χορηγήσετε;"</string>
     <string name="bluetooth_ask_enablement_and_lasting_discovery" msgid="7471195931669103553">"Μια εφαρμογή στο τηλέφωνό σας ζητά άδεια να ενεργοποιήσει το Bluetooth και να καταστήσει το τηλέφωνό σας ανιχνεύσιμο από άλλες συσκευές. Θέλετε να τη χορηγήσετε;"</string>
     <string name="bluetooth_turning_on" msgid="3107102168379705771">"Ενεργοποίηση Bluetooth…"</string>
+    <string name="bluetooth_connection_permission_request" msgid="4747918249032890077">"Αίτημα σύνδεσης Bluetooth"</string>
+    <string name="bluetooth_connection_notif_message" msgid="1833221950512058309">"Αγγίξτε για να συνδεθείτε στο \"<xliff:g id="DEVICE_NAME">%1$s</xliff:g>\""</string>
+    <string name="bluetooth_connection_dialog_text" msgid="8455427559949998023">"Θέλετε να συνδεθείτε στο \"<xliff:g id="DEVICE_NAME">%1$s</xliff:g>\";"</string>
     <string name="date_and_time" msgid="4114084177056654663">"Ρυθμίσεις ημερομηνίας &amp; ώρας"</string>
     <string name="date_time_12_hour_sample" msgid="3259617262618020574">"1:00 μμ"</string>
     <string name="date_time_24_hour_sample" msgid="8916857570746212357">"13:00"</string>
@@ -233,7 +236,7 @@
     <string name="roaming_reenable_title" msgid="7626425894611573131">"Προσοχή"</string>
     <string name="networks" msgid="6333316876545927039">"Επιλογή παρόχου"</string>
     <string name="sum_carrier_select" msgid="6648929373316748020">"Επιλέξτε εταιρεία δικτύου"</string>
-    <string name="date_and_time_settings_title" msgid="3350640463596716780">"Ημερομηνία &amp; ώρα"</string>
+    <string name="date_and_time_settings_title" msgid="3350640463596716780">"Ημερομηνία και ώρα"</string>
     <string name="date_and_time_settings_summary" msgid="2435705040205950381">"Ορισμός ημερομηνίας, ώρας, ζώνης ώρας &amp; μορφές"</string>
     <string name="date_time_auto" msgid="3086083265745944725">"Αυτόματο"</string>
     <string name="date_time_auto_summaryOn" msgid="9034585614665299846">"Χρήση τιμών που παρέχονται από δίκτυο"</string>
@@ -340,9 +343,7 @@
     <string name="bluetooth_dock_settings_remember" msgid="5551459057010609115">"Διατήρηση ρυθμίσεων"</string>
     <string name="nfc_quick_toggle_title" msgid="6769159366307299004">"NFC"</string>
     <string name="nfc_quick_toggle_summary" msgid="1988408027741447231">"Κάντε χρήση της Επικοινωνίας κοντινού πεδίου για την ανάγνωση και ανταλλαγή ετικετών"</string>
-    <!-- no translation found for nfc_toggle_error (2233172102497535522) -->
-    <!-- no translation found for nfc_toggle_error (8998642457947607263) -->
-    <skip />
+    <string name="nfc_toggle_error" msgid="2233172102497535522">"Παρουσιάστηκε σφάλμα."</string>
     <string name="wifi_quick_toggle_title" msgid="874495178395350104">"Wi-Fi"</string>
     <string name="wifi_quick_toggle_summary" msgid="1047950931623694366">"Ενεργοποίηση Wi-Fi"</string>
     <string name="wifi_settings" msgid="4746946030627213196">"Ρυθμίσεις Wi-Fi"</string>
@@ -424,7 +425,7 @@
     <string name="ringtone_title" msgid="5379026328015343686">"Ήχος κλήσης τηλεφώνου"</string>
     <string name="ringtone_summary" msgid="2630023412632683493"></string>
     <string name="all_volume_title" msgid="8741571721868253103">"Ένταση ήχου"</string>
-    <string name="ring_volume_title" msgid="7938706566797464165">"Ένταση ειδοποίησης ήχου"</string>
+    <string name="ring_volume_title" msgid="7938706566797464165">"Ένταση ήχου κουδουνίσματος"</string>
     <string name="ring_volume_summary" msgid="7055497624193116879"></string>
     <string name="vibrate_in_silent_title" msgid="3897968069156767036">"Δόνηση στο αθόρυβο"</string>
     <string name="vibrate_in_silent_summary" msgid="3312600513070076281">"Να επιτρέπεται η ανάδραση με δόνηση στην αθόρυβη λειτουργία"</string>
@@ -523,6 +524,7 @@
     <string name="storage_settings_summary" product="default" msgid="9176693537325988610">"Αφαίρεση κάρτας SD, προβολή διαθέσιμου αποθηκευτικού χώρου"</string>
     <string name="status_number" msgid="5123197324870153205">"Ο τηλεφωνικός αριθμός μου"</string>
     <string name="status_min_number" msgid="3519504522179420597">"ΛΕΠΤΟ"</string>
+    <string name="status_msid_number" msgid="909010114445780530">"MSID"</string>
     <string name="status_prl_version" msgid="8499039751817386529">"Έκδοση PRL"</string>
     <string name="status_meid_number" msgid="1751442889111731088">"MEID"</string>
     <string name="status_network_type" msgid="3279383550222116235">"Τύπος δικτύου κινητής τηλεφωνίας"</string>
@@ -548,7 +550,7 @@
     <string name="sd_insert_summary" product="default" msgid="2048640010381803841">"Εισαγάγετε μια κάρτα SD για τοποθέτηση"</string>
     <string name="sd_mount" product="nosdcard" msgid="8966695015677343116">"Προσάρτ. χώρου αποθ. USB"</string>
     <string name="sd_mount" product="default" msgid="5940523765187704135">"Τοποθέτηση κάρτας SD"</string>
-    <!-- outdated translation 6733254203291665551 -->     <string name="sd_mount_summary" product="nosdcard" msgid="1794150364965145726">"Προσαρ. τον εσ. αποθ. χώρο USB"</string>
+    <string name="sd_mount_summary" product="nosdcard" msgid="1794150364965145726">"Προσάρτηση αποθηκευτικού χώρου USB"</string>
     <string name="sd_mount_summary" product="default" msgid="4936591681679097699">"Τοποθέτηση κάρτας SD"</string>
     <string name="sd_format" product="nosdcard" msgid="2148179271623099054">"Διαγρ. αποθ. χώρου USB"</string>
     <string name="sd_format" product="default" msgid="2576054280507119870">"Διαγραφή κάρτας SD"</string>
@@ -591,6 +593,7 @@
     <string name="apn_auth_type_chap" msgid="3369626283789068360">"CHAP"</string>
     <string name="apn_auth_type_pap_chap" msgid="9102343063036134541">"PAP ή CHAP"</string>
     <string name="apn_type" msgid="469613123902220544">"Τύπος APN"</string>
+    <string name="apn_protocol" msgid="3272222921649348640">"Πρωτόκολλο APN"</string>
     <string name="menu_delete" msgid="6981294422841124659">"Διαγραφή APN"</string>
     <string name="menu_new" msgid="3014205883303921729">"Νέο APN"</string>
     <string name="menu_save" msgid="8109345640668285399">"Αποθ/ση"</string>
@@ -976,7 +979,7 @@
     <string name="menu_stats_refresh" msgid="1676215433344981075">"Ανανέωση"</string>
     <string name="process_kernel_label" msgid="3916858646836739323">"Λειτουργικό σύστημα Android"</string>
     <string name="process_mediaserver_label" msgid="6500382062945689285">"Mediaserver"</string>
-    <string name="voice_input_output_settings" msgid="1336135218350444783">"Φωνητική είσοδος και έξοδος"</string>
+    <string name="voice_input_output_settings" msgid="1336135218350444783">"Φωνητική είσοδος/έξοδος"</string>
     <string name="voice_input_output_settings_title" msgid="2442850635048676991">"Ρυθμίσεις φωνητικής εισόδου και εξόδου"</string>
     <string name="voice_search_settings_title" msgid="2775469246913196536">"Φωνητική αναζήτηση"</string>
     <string name="keyboard_settings_title" msgid="5080115226780201234">"Πληκτρολόγιο Android"</string>
@@ -1166,4 +1169,8 @@
     <string name="sound_category_calls_title" msgid="3688531959256239012">"Εισερχόμενες κλήσεις"</string>
     <string name="sound_category_notification_title" msgid="3502115998790286943">"Ειδοποιήσεις"</string>
     <string name="sound_category_feedback_title" msgid="4399742321363475393">"Σχόλια"</string>
+    <string name="wimax_settings" msgid="1574837328738396794">"Ρυθμίσεις 4G"</string>
+    <string name="wimax_settings_summary" msgid="3207355006084135453">"Εγκατάσταση και διαχείριση δικτύου και μόντεμ 4G"</string>
+    <string name="status_wimax_mac_address" msgid="8390791848661413416">"Διεύθυνση 4G MAC"</string>
+    <string name="additional_system_update_settings_list_item_title" msgid="214987609894661992">"Πρόσθετες ενημερώσεις συστήματος"</string>
 </resources>

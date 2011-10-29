@@ -252,7 +252,7 @@ public class Status extends PreferenceActivity {
 
         mPhoneStateReceiver.registerIntent();
         registerReceiver(mBatteryInfoReceiver, new IntentFilter(Intent.ACTION_BATTERY_CHANGED));
-        
+
         updateSignalStrength();
         updateServiceState(mPhone.getServiceState());
         updateDataState();

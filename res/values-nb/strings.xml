@@ -122,6 +122,12 @@
     <string name="bluetooth_ask_enablement_and_discovery" msgid="7220210326619399542">"En applikasjon på telefonen spør om tillatelse til å slå på Bluetooth og gjøre telefonen synlig for andre enheter i <xliff:g id="TIMEOUT">%1$d</xliff:g> sekunder. Ønsker du å gjøre dette?"</string>
     <string name="bluetooth_ask_enablement_and_lasting_discovery" msgid="7471195931669103553">"Et program på telefonen ber om tillatelse til å aktivere Bluetooth og gjøre telefonen synlig for andre enheter. Ønsker du å gjøre dette?"</string>
     <string name="bluetooth_turning_on" msgid="3107102168379705771">"Aktiverer Bluetooth…"</string>
+<<<<<<< HEAD
+=======
+    <string name="bluetooth_connection_permission_request" msgid="4747918249032890077">"Bluetooth-tilkoblingsforespørsel"</string>
+    <string name="bluetooth_connection_notif_message" msgid="1833221950512058309">"Trykk for å koble til «<xliff:g id="DEVICE_NAME">%1$s</xliff:g>»"</string>
+    <string name="bluetooth_connection_dialog_text" msgid="8455427559949998023">"Ønsker du å koble til «<xliff:g id="DEVICE_NAME">%1$s</xliff:g>»?"</string>
+>>>>>>> remotes/aosp/gingerbread
     <string name="date_and_time" msgid="4114084177056654663">"Innstillinger for dato og tid"</string>
     <string name="date_time_12_hour_sample" msgid="3259617262618020574">"1:00 ettermiddag"</string>
     <string name="date_time_24_hour_sample" msgid="8916857570746212357">"13:00"</string>
@@ -195,10 +201,17 @@
     <string name="sdcard_settings_mass_storage_status" product="default" msgid="4786433969313661655">"Minnekortet blir brukt som en masselagringsenhet"</string>
     <string name="sdcard_settings_unmounted_status" product="nosdcard" msgid="7503300818792750913">"USB-lagring kan nå fjernes"</string>
     <string name="sdcard_settings_unmounted_status" product="default" msgid="3812022095683863087">"Det er trygt å fjerne minnekortet"</string>
+<<<<<<< HEAD
     <string name="sdcard_settings_bad_removal_status" product="nosdcard" msgid="7761390725880773697">"USB-lagr. fjernet under bruk!"</string>
     <string name="sdcard_settings_bad_removal_status" product="default" msgid="5145797653495907970">"Minnekortet ble fjernet mens det fortsatt var i bruk!"</string>
     <string name="sdcard_settings_used_bytes_label" msgid="8820289486001170836">"Brukt antall byte:"</string>
     <string name="sdcard_settings_scanning_status" product="nosdcard" msgid="7503429447676219564">"Skanner USB-lagr. for medier"</string>
+=======
+    <string name="sdcard_settings_bad_removal_status" product="nosdcard" msgid="7761390725880773697">"USB-enh. fjernet under bruk!"</string>
+    <string name="sdcard_settings_bad_removal_status" product="default" msgid="5145797653495907970">"Minnekortet ble fjernet mens det fortsatt var i bruk!"</string>
+    <string name="sdcard_settings_used_bytes_label" msgid="8820289486001170836">"Brukt antall byte:"</string>
+    <string name="sdcard_settings_scanning_status" product="nosdcard" msgid="7503429447676219564">"Skanner USB-enh. for medieinnh."</string>
+>>>>>>> remotes/aosp/gingerbread
     <string name="sdcard_settings_scanning_status" product="default" msgid="2763464949274455656">"Leter etter media på minnekortet…"</string>
     <string name="sdcard_settings_read_only_status" product="nosdcard" msgid="3771783090621312312">"USB-lagr. har kun lesetilg."</string>
     <string name="sdcard_settings_read_only_status" product="default" msgid="5706115860484118911">"Minnekortet ble montert skrivebeskyttet"</string>
@@ -340,9 +353,13 @@
     <string name="bluetooth_dock_settings_remember" msgid="5551459057010609115">"Husk innstillinger"</string>
     <string name="nfc_quick_toggle_title" msgid="6769159366307299004">"NFC"</string>
     <string name="nfc_quick_toggle_summary" msgid="1988408027741447231">"Bruk NFC-teknologi for å lese og utveksle koder"</string>
+<<<<<<< HEAD
     <!-- no translation found for nfc_toggle_error (2233172102497535522) -->
     <!-- no translation found for nfc_toggle_error (8998642457947607263) -->
     <skip />
+=======
+    <string name="nfc_toggle_error" msgid="2233172102497535522">"Det oppstod en feil."</string>
+>>>>>>> remotes/aosp/gingerbread
     <string name="wifi_quick_toggle_title" msgid="874495178395350104">"Trådløst nett"</string>
     <string name="wifi_quick_toggle_summary" msgid="1047950931623694366">"Slå på trådløst nett"</string>
     <string name="wifi_settings" msgid="4746946030627213196">"Trådløsinnstillinger"</string>
@@ -388,9 +405,15 @@
     <string name="wifi_save" msgid="3331121567988522826">"Lagre"</string>
     <string name="wifi_cancel" msgid="6763568902542968964">"Avbryt"</string>
     <string name="wifi_advanced_titlebar" msgid="5419052271935350999">"Avansert"</string>
+<<<<<<< HEAD
     <string name="wifi_setting_num_channels_title" msgid="694031537019656132">"Juridisk område"</string>
     <string name="wifi_setting_num_channels_summary" msgid="4889355096717099141">"Velg antall kanaler som skal brukes"</string>
     <string name="wifi_setting_num_channels_error" msgid="5765443843427870721">"Kunne ikke velge juridisk område."</string>
+=======
+    <string name="wifi_setting_num_channels_title" msgid="694031537019656132">"Geografisk område"</string>
+    <string name="wifi_setting_num_channels_summary" msgid="4889355096717099141">"Velg antall kanaler som skal brukes"</string>
+    <string name="wifi_setting_num_channels_error" msgid="5765443843427870721">"Det oppsto et problem ved fastsettelse av geografisk område."</string>
+>>>>>>> remotes/aosp/gingerbread
     <string name="wifi_setting_num_channels_channel_phrase" msgid="1269381923672908636">"<xliff:g id="NUM_CHANNELS">%1$d</xliff:g> kanaler"</string>
     <string name="wifi_setting_sleep_policy_title" msgid="1367731352485585528">"Soveinnstillinger for trådløst nett"</string>
     <string name="wifi_setting_sleep_policy_summary" msgid="7573693311804602041">"Spesifiser når telefonen skal bytte fra trådløsnett til mobiltelefonidata"</string>
@@ -444,7 +467,11 @@
     <string name="dock_settings_summary" msgid="455802113668982481">"Lydinnstillinger for festet forankring"</string>
     <string name="dtmf_tone_enable_title" msgid="1453831168789523185">"Hørbare tastetoner"</string>
     <string name="dtmf_tone_enable_summary_on" msgid="3028201873989887327">"Spill toner når talltastaturet benyttes"</string>
+<<<<<<< HEAD
     <string name="dtmf_tone_enable_summary_off" msgid="7791065951268525678">"Spill toner når talltastaturet benytes"</string>
+=======
+    <string name="dtmf_tone_enable_summary_off" msgid="7791065951268525678">"Spill toner når talltastaturet benyttes"</string>
+>>>>>>> remotes/aosp/gingerbread
     <string name="sound_effects_enable_title" msgid="3197313718929122833">"Hørbart valg"</string>
     <string name="sound_effects_enable_summary_on" msgid="6154141289879491329">"Lag lyd under skjermvalg"</string>
     <string name="sound_effects_enable_summary_off" msgid="3447739581759560125">"Lag lyd under skjermvalg"</string>
@@ -523,6 +550,10 @@
     <string name="storage_settings_summary" product="default" msgid="9176693537325988610">"Avmonter minnekort, vis ledig plass"</string>
     <string name="status_number" msgid="5123197324870153205">"Telefonnummer"</string>
     <string name="status_min_number" msgid="3519504522179420597">"MIN"</string>
+<<<<<<< HEAD
+=======
+    <string name="status_msid_number" msgid="909010114445780530">"MSID"</string>
+>>>>>>> remotes/aosp/gingerbread
     <string name="status_prl_version" msgid="8499039751817386529">"PRL-versjon"</string>
     <string name="status_meid_number" msgid="1751442889111731088">"MEID"</string>
     <string name="status_network_type" msgid="3279383550222116235">"Nettverkstype"</string>
@@ -548,7 +579,11 @@
     <string name="sd_insert_summary" product="default" msgid="2048640010381803841">"Sett inn et minnekort for å koble til"</string>
     <string name="sd_mount" product="nosdcard" msgid="8966695015677343116">"Koble til USB-lagring"</string>
     <string name="sd_mount" product="default" msgid="5940523765187704135">"Koble til minnekort"</string>
+<<<<<<< HEAD
     <!-- outdated translation 6733254203291665551 -->     <string name="sd_mount_summary" product="nosdcard" msgid="1794150364965145726">"Koble fra intern USB-lagring"</string>
+=======
+    <string name="sd_mount_summary" product="nosdcard" msgid="1794150364965145726">"Koble til USB-lagring"</string>
+>>>>>>> remotes/aosp/gingerbread
     <string name="sd_mount_summary" product="default" msgid="4936591681679097699">"Koble til minnekortet"</string>
     <string name="sd_format" product="nosdcard" msgid="2148179271623099054">"Slett USB-lagring"</string>
     <string name="sd_format" product="default" msgid="2576054280507119870">"Slett SD-kort"</string>
@@ -591,6 +626,10 @@
     <string name="apn_auth_type_chap" msgid="3369626283789068360">"CHAP"</string>
     <string name="apn_auth_type_pap_chap" msgid="9102343063036134541">"CHAP"</string>
     <string name="apn_type" msgid="469613123902220544">"APN-type"</string>
+<<<<<<< HEAD
+=======
+    <string name="apn_protocol" msgid="3272222921649348640">"APN-protokoll"</string>
+>>>>>>> remotes/aosp/gingerbread
     <string name="menu_delete" msgid="6981294422841124659">"Slett APN"</string>
     <string name="menu_new" msgid="3014205883303921729">"Nytt APN"</string>
     <string name="menu_save" msgid="8109345640668285399">"Lagre"</string>
@@ -722,7 +761,11 @@
     <string name="applications_settings_summary" msgid="2714215108369119717">"Installerte applikasjoner, hurtigtaster"</string>
     <string name="applications_settings_header" msgid="6018266337275422250">"Innstillinger for applikasjoner"</string>
     <string name="install_applications" msgid="4872012136210802181">"Ukjente kilder"</string>
+<<<<<<< HEAD
     <string name="install_unknown_applications" msgid="6612824788917283662">"Tillat installasjon av programmer som ikke finnes på Android-markedet"</string>
+=======
+    <string name="install_unknown_applications" msgid="6612824788917283662">"Tillat installasjon av applikasjoner som ikke kommer fra Android-markedet"</string>
+>>>>>>> remotes/aosp/gingerbread
     <string name="install_all_warning" msgid="1923717607319933741">"Telefonen og dine personlige data er mer sårbare mot angrep fra applikasjoner som kommer fra ukjente kilder. Du godtar at du selv er ansvarlig for enhver skade på telefonen eller tap av data som måtte oppstå fra bruk av slike applikasjoner."</string>
     <string name="application_info_label" msgid="1150486628158409543">"Applikasjonsinformasjon"</string>
     <string name="storage_label" msgid="8700867073480107253">"Lagring"</string>
@@ -758,7 +801,11 @@
     <string name="filter_apps_onsdcard" product="nosdcard" msgid="4843063154701023349">"USB-lagring"</string>
     <string name="filter_apps_onsdcard" product="default" msgid="1477351142334784771">"På minnekort"</string>
     <string name="disabled" msgid="9206776641295849915">"Deaktivert"</string>
+<<<<<<< HEAD
     <string name="no_applications" msgid="5190227407135243904">"Ingen programmer."</string>
+=======
+    <string name="no_applications" msgid="5190227407135243904">"Ingen applikasjoner."</string>
+>>>>>>> remotes/aosp/gingerbread
     <string name="internal_storage" msgid="1584700623164275282">"Intern lagring"</string>
     <string name="sd_card_storage" product="nosdcard" msgid="2673203150465132465">"USB-lagring"</string>
     <string name="sd_card_storage" product="default" msgid="7623513618171928235">"SD-kortlagring"</string>
@@ -794,9 +841,15 @@
     <string name="move_app_failed_dlg_title" msgid="4337731903265156405">"Flytt program"</string>
     <string name="move_app_failed_dlg_text" msgid="8824246817947643697">"Fikk ikke flyttet programmet. <xliff:g id="REASON">%1$s</xliff:g>"</string>
     <string name="app_install_location_title" msgid="2068975150026852168">"Foretrukket installeringssted"</string>
+<<<<<<< HEAD
     <string name="app_install_location_summary" msgid="879753854530300436">"Endre foretrukket plassering for installasjon av nye programmer."</string>
     <string name="storageuse_settings_title" msgid="5657014373502630403">"Bruk av lagringsplass"</string>
     <string name="storageuse_settings_summary" msgid="2556057379120846792">"Vis lagringsplass for programmer"</string>
+=======
+    <string name="app_install_location_summary" msgid="879753854530300436">"Endre foretrukket plassering for installasjon av nye applikasjoner."</string>
+    <string name="storageuse_settings_title" msgid="5657014373502630403">"Bruk av lagringsplass"</string>
+    <string name="storageuse_settings_summary" msgid="2556057379120846792">"Vis lagringsplass brukt av applikasjoner"</string>
+>>>>>>> remotes/aosp/gingerbread
     <string name="runningservices_settings_title" msgid="8097287939865165213">"Kjørende tjenester"</string>
     <string name="runningservices_settings_summary" msgid="854608995821032748">"Vis og kontroller tjenester som kjører for øyeblikket"</string>
     <string name="service_restarting" msgid="2242747937372354306">"Starter på nytt"</string>
@@ -968,7 +1021,11 @@
     <string name="battery_sugg_bluetooth_headset" msgid="8214816222115517479">"Prøv å koble til en annen Bluetooth-enhet"</string>
     <string name="battery_desc_apps" msgid="6665712811746233450">"Batteri brukt av program"</string>
     <string name="battery_sugg_apps_info" msgid="6065882899391322442">"Stopp eller avinstaller applikasjonen"</string>
+<<<<<<< HEAD
     <string name="battery_sugg_apps_gps" msgid="4545056413090932541">"Kontroller GPS manuelt, for å forhindre at programmer bruker funksjonen"</string>
+=======
+    <string name="battery_sugg_apps_gps" msgid="4545056413090932541">"Kontroller GPS manuelt, for å forhindre at applikasjoner bruker funksjonen"</string>
+>>>>>>> remotes/aosp/gingerbread
     <string name="battery_sugg_apps_settings" msgid="8021302847272481168">"Applikasjonen har muligens innstillinger som kan redusere batteribruken"</string>
     <string name="menu_stats_unplugged" msgid="8296577130840261624">"<xliff:g id="UNPLUGGED">%1$s</xliff:g> siden strømmen ble frakoblet"</string>
     <string name="menu_stats_last_unplugged" msgid="5922246077592434526">"Siste gang uten strøm i <xliff:g id="UNPLUGGED">%1$s</xliff:g>"</string>
@@ -1166,4 +1223,11 @@
     <string name="sound_category_calls_title" msgid="3688531959256239012">"Innkommende anrop"</string>
     <string name="sound_category_notification_title" msgid="3502115998790286943">"Varsler"</string>
     <string name="sound_category_feedback_title" msgid="4399742321363475393">"Tilbakemelding"</string>
+<<<<<<< HEAD
+=======
+    <string name="wimax_settings" msgid="1574837328738396794">"4G-innstillinger"</string>
+    <string name="wimax_settings_summary" msgid="3207355006084135453">"Konfigurer og administrer 4G-nettverk og -modem"</string>
+    <string name="status_wimax_mac_address" msgid="8390791848661413416">"4G MAC-adresse"</string>
+    <string name="additional_system_update_settings_list_item_title" msgid="214987609894661992">"Ytterligere systemoppdateringer"</string>
+>>>>>>> remotes/aosp/gingerbread
 </resources>

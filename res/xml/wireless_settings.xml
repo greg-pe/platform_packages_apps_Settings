@@ -66,8 +66,8 @@
             android:targetClass="com.android.settings.bluetooth.BluetoothSettings" />
     </PreferenceScreen>
 
-    <PreferenceScreen 
-        android:key="tether_settings"         
+    <PreferenceScreen
+        android:key="tether_settings"
         android:title="@string/tether_settings_title_both"
         android:summary="@string/tether_settings_summary_both">
         <intent

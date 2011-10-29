@@ -195,7 +195,6 @@ public class BluetoothSettings extends PreferenceActivity
         mLocalManager.setForegroundActivity(null);
         mDevicePreferenceMap.clear();
         mDeviceList.removeAll();
-
         unregisterReceiver(mReceiver);
 
         mLocalManager.unregisterCallback(this);

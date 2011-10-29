@@ -244,7 +244,6 @@ public class ApnEditor extends PreferenceActivity
                 mAuthType.setValue(null);
             }
             mProtocol.setValue(mCursor.getString(PROTOCOL_INDEX));
-
         }
 
         mName.setSummary(checkNull(mName.getText()));

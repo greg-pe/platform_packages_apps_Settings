@@ -17,7 +17,11 @@
 <appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android"
     android:minWidth="294dip"
     android:minHeight="72dip"
+<<<<<<< HEAD
     android:initialLayout="@layout/widget_loading"
     android:configure="com.android.settings.widget.WidgetSettings"    
+=======
+    android:initialLayout="@layout/widget"
+>>>>>>> remotes/aosp/gingerbread
     >
 </appwidget-provider>
