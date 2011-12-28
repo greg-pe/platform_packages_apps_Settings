@@ -64,22 +64,22 @@
     <header
         android:id="@+id/launcher_settings"
         android:title="@string/launcher_settings_title"
-        android:icon="@drawable/ic_settings_launcher2">
-        <intent
-            android:action="android.intent.action.MAIN"
-            android:targetPackage="com.android.launcher"
-            android:targetClass="com.android.launcher2.preference.Preferences" />
-    </header>
-
-   <!-- Trebuchet settings -->
-    <header
-        android:id="@+id/cmlauncher_settings"
-        android:title="@string/cmlauncher_settings_title"
         android:icon="@drawable/ic_settings_cmlauncher">
         <intent
             android:action="android.intent.action.MAIN"
             android:targetPackage="com.cyanogenmod.trebuchet"
             android:targetClass="com.cyanogenmod.trebuchet.preference.Preferences" />
+    </header>
+
+    <!-- Cpu Settings -->
+    <header
+        android:id="@+id/cpu_settings"
+        android:title="@string/cpu_settings_title"
+        android:icon="@drawable/ic_settings_cpu">
+        <intent
+            android:action="android.intent.action.MAIN"
+            android:targetPackage="com.android.cputools"
+            android:targetClass="com.android.cputools.activities.CPUActivity" />
     </header>
 
     <!-- DEVICE -->
