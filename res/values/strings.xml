@@ -2693,9 +2693,14 @@ found in the list of installed apps.</string>
     <!-- Development Settings summary.  The summary of the item to take the user to Development settings.  Development settings are settings meant for application developers. -->
     <string name="development_settings_summary">Set options for app development</string>
     <!-- Setting checkbox title for Whether to enable USB debugging support on the phone. -->
-    <string name="enable_adb">USB debugging</string>
+    <string name="enable_adb">Android debugging</string>
     <!-- Setting checkbox summary for Whether to enable USB debugging support on the phone -->
-    <string name="enable_adb_summary">Debug mode when USB is connected</string>
+    <string name="enable_adb_summary">Enable Android debug mode, the adb interface on USB (or network)</string>   
+    <!-- Setting checkbox title for Whether debugging should run over TCP/IP. -->
+    <string name="adb_over_network">ADB over Network</string>
+    <string name="adb_over_network_summary">Enable TCP/IP debugging over Network interfaces (Wi-Fi, Usb net). This setting is reset on reboot</string>
+    <!-- Warning for Adb over Network -->
+    <string name="adb_over_network_warning">WARNING: When ADB over Network is enabled, your phone is open for intrusions on all connected networks, including GSM data network !\n\nOnly use this feature when you are connected on trusted networks.\n\nDo you really want to enable this function ?</string>
     <!-- Setting checkbox title for displaying USB debugging notification -->
     <string name="adb_notify">USB debugging notify</string>
     <!-- Setting checkbox summary for displaying USB debugging notification -->
