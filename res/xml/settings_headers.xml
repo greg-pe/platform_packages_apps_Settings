@@ -70,18 +70,11 @@
             android:targetPackage="com.cyanogenmod.trebuchet"
             android:targetClass="com.cyanogenmod.trebuchet.preference.Preferences" />
     </header>
-
-    <!-- Themes -->
-    <header
-        android:id="@+id/themes_settings"
-        android:icon="@drawable/ic_settings_placeholder"
-        android:fragment="com.android.settings.ThemesSettings"
-        android:title="@string/themes_settings_title" />
  
     <!-- System -->
     <header
         android:id="@+id/system_settings"
-        android:icon="@drawable/ic_settings_placeholder"
+        android:icon="@drawable/ic_settings_elite"
         android:fragment="com.android.settings.SystemSettings"
         android:title="@string/system_settings_title" />
 
@@ -144,13 +137,6 @@
     <!-- PERSONAL -->
     <header android:title="@string/header_category_personal" />
 
-    <!-- Profiles -->
-    <header
-        android:id="@+id/profiles_settings"
-        android:icon="@drawable/ic_settings_placeholder"
-        android:fragment="com.android.settings.ProfilesSettings"
-        android:title="@string/profiles_settings_title" />
-
     <!-- Data Sync. The settings activity will ensure this is resolved to an
          activity on the system image, otherwise it will remove this
          preference. -->
@@ -192,6 +178,13 @@
     <!-- SYSTEM -->
     <header android:title="@string/header_category_system" />
 
+    <!-- Performance -->
+    <header
+        android:id="@+id/performance_settings"
+        android:fragment="com.android.settings.PerformanceSettings"
+        android:icon="@drawable/ic_settings_cpu"
+        android:title="@string/performance_settings_title" />
+
     <!-- Dock -->
     <header
         android:id="@+id/dock_settings"
@@ -219,13 +212,6 @@
         android:fragment="com.android.settings.DevelopmentSettings"
         android:icon="@drawable/ic_settings_development"
         android:title="@string/development_settings_title" />
-
-    <!-- Performance -->
-    <header
-        android:id="@+id/performance_settings"
-        android:fragment="com.android.settings.PerformanceSettings"
-        android:icon="@drawable/ic_settings_placeholder"
-        android:title="@string/performance_settings_title" />
 
     <!-- About Device -->
     <header
