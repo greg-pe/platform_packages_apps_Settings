@@ -187,6 +187,7 @@
             android:action="android.intent.action.MAIN"
             android:targetPackage="com.android.cputools"
             android:targetClass="com.android.cputools.activities.CPUActivity" />
+    </header>
 
     <!-- Dock -->  
     <header
