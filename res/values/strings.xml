@@ -4008,7 +4008,6 @@ found in the list of installed apps.</string>
     <!-- About phone screen,  seeting option name-->
     <string name="rom_version">ROM Version</string>
     <!-- Launcher settings -->
-    <string name="launcher_settings_title">Launcher Settings</string>
     <string name="cmlauncher_settings_title">Trebuchet</string>
     <!-- CPU Settings -->
     <string name="cpu_settings_title">Cpu Settings</string>
