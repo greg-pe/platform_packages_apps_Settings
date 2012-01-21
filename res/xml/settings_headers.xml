@@ -178,14 +178,17 @@
     <!-- SYSTEM -->
     <header android:title="@string/header_category_system" />
 
-    <!-- Performance -->
-    <header
-        android:id="@+id/performance_settings"
-        android:fragment="com.android.settings.PerformanceSettings"
-        android:icon="@drawable/ic_settings_cpu"
-        android:title="@string/performance_settings_title" />
+    <!-- Cpu Settings -->
+    <header    
+        android:id="@+id/cpu_settings"
+        android:title="@string/cpu_settings_title"
+        android:icon="@drawable/ic_settings_cpu">
+        <intent
+            android:action="android.intent.action.MAIN"
+            android:targetPackage="com.android.cputools"
+            android:targetClass="com.android.cputools.activities.CPUActivity" />
 
-    <!-- Dock -->
+    <!-- Dock -->  
     <header
         android:id="@+id/dock_settings"
         android:fragment="com.android.settings.DockSettings"
