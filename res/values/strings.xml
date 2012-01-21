@@ -1394,18 +1394,6 @@
     <!-- About device screen, list item summary. Takes the user to the screen for seeing and installing system updates. -->
     <string name="system_update_settings_list_item_summary">""</string>
 
-    <!-- Donate #CM -->
-    <!-- About device screen, list item title. Takes the user to the screen about how to donate to the CyanogenMod Project. -->
-    <string name="donate_settings_title">Donate</string>
-    <!-- About device screen, list item summary. Takes the user to the screen about how to donate to the CyanogenMod Project. -->
-    <string name="donate_settings_summary">""</string>
-
-    <!-- Anonymous Statistics #CM -->
-    <!-- About device screen, list item title. Takes the user to the screen about opting in or out of anonymous statistics. -->
-    <string name="anonymous_statistics_settings_title">Anonymous statistics</string>
-    <!-- About device screen, list item summary. Takes the user to the screen about opting in or out of anonymous statistics. -->
-    <string name="anonymous_statistics_settings_summary">Help make CyanogenMod better by opting into anonymous statistics reporting</string>
-
     <!-- About device screen, model of device. -->
     <string name="model_number">Model number</string>
     <!-- About device screen, version of Android. -->
@@ -1414,14 +1402,12 @@
     <string name="baseband_version">Baseband version</string>
     <!-- About device screen, version of kernel. -->
     <string name="kernel_version">Kernel version</string>
-    <!-- About device screen, version of modification of Android. -->
-    <string name="mod_version">CyanogenMod version</string>
-    <string name="mod_version_default">Unknown</string>
+    <!-- About phone screen,  seeting option name-->
+    <string name="rom_version">ROM Version</string>
     <!-- About device screen, build number. -->
     <string name="build_number">Build number</string>
     <!-- About device screen, build date of ROM. -->
     <string name="build_date">Build date</string>
-    <string name="build_date_default">2012-01-01-0000</string>
     <!-- About device screen, show when a value of some status item is unavailable. -->
     <string name="device_info_not_available">Not available</string>
     
