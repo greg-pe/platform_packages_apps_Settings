@@ -28,9 +28,18 @@ import android.preference.PreferenceScreen;
 
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
+import com.android.settings.Utils;
 
 public class MemoryManagement extends SettingsPreferenceFragment implements
         OnPreferenceChangeListener {
+
+    public static final String KSM_RUN_FILE = "/sys/kernel/mm/ksm/run";
+
+    public static final String KSM_PREF = "pref_ksm";
+
+    public static final String KSM_PREF_DISABLED = "0";
+
+    public static final String KSM_PREF_ENABLED = "1";
 
     private static final String ZRAM_PREF = "pref_zram_size";
 
@@ -48,6 +57,7 @@ public class MemoryManagement extends SettingsPreferenceFragment implements
 
     private ListPreference mzRAM;
 
+    private CheckBoxPreference mKSMPref;
     private ListPreference mHeapsizePref;
 
     private int swapAvailable = -1;
@@ -63,6 +73,7 @@ public class MemoryManagement extends SettingsPreferenceFragment implements
             PreferenceScreen prefSet = getPreferenceScreen();
 
             mzRAM = (ListPreference) prefSet.findPreference(ZRAM_PREF);
+            mKSMPref = (CheckBoxPreference) prefSet.findPreference(KSM_PREF);
             mHeapsizePref = (ListPreference) prefSet.findPreference(HEAPSIZE_PREF);
 
             if (isSwapAvailable()) {
@@ -74,6 +85,16 @@ public class MemoryManagement extends SettingsPreferenceFragment implements
                 prefSet.removePreference(mzRAM);
             }
 
+            if (Utils.fileExists(KSM_RUN_FILE)) {
+                mKSMPref.setChecked(KSM_PREF_ENABLED.equals(Utils.fileReadOneLine(KSM_RUN_FILE)));
+            } else {
+                prefSet.removePreference(mKSMPref);
+            }
+
+            String purgeableAssets = SystemProperties.get(PURGEABLE_ASSETS_PERSIST_PROP,
+                    PURGEABLE_ASSETS_DEFAULT);
+            mPurgeableAssetsPref.setChecked("1".equals(purgeableAssets));
+
             mHeapsizePref.setValue(SystemProperties.get(HEAPSIZE_PERSIST_PROP,
                     SystemProperties.get(HEAPSIZE_PROP, HEAPSIZE_DEFAULT)));
             mHeapsizePref.setOnPreferenceChangeListener(this);
@@ -83,6 +104,12 @@ public class MemoryManagement extends SettingsPreferenceFragment implements
 
     @Override
     public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
+
+        if (preference == mKSMPref) {
+            Utils.fileWriteOneLine(KSM_RUN_FILE, mKSMPref.isChecked() ? "1" : "0");
+            return true;
+        }
+
         return false;
     }
 
