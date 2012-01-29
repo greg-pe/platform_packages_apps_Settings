@@ -1,39 +1,37 @@
 /*
-* Copyright (C) 2012 The CyanogenMod Project
-*
-* Licensed under the Apache License, Version 2.0 (the "License");
-* you may not use this file except in compliance with the License.
-* You may obtain a copy of the License at
-*
-* http://www.apache.org/licenses/LICENSE-2.0
-*
-* Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS,
-* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-* See the License for the specific language governing permissions and
-* limitations under the License.
-*/
-package com.android.settings.cyanogenmod;
+ * Copyright (C) 2012 The CyanogenMod Project
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
 
+package com.android.settings.cyanogenmod;
 
 import android.content.ContentResolver;
 import android.os.Bundle;
 import android.preference.CheckBoxPreference;
 import android.preference.ListPreference;
 import android.preference.Preference;
-import android.preference.PreferenceFragment;
-import android.preference.PreferenceActivity;
-import android.preference.PreferenceScreen;
 import android.preference.Preference.OnPreferenceChangeListener;
+import android.preference.PreferenceScreen;
 import android.provider.Settings;
 
-import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.R;
+import com.android.settings.SettingsPreferenceFragment;
 
 public class Backlight extends SettingsPreferenceFragment implements
         OnPreferenceChangeListener {
 
-    private static final String FILTER_ENABLED = "light_filter_enabled";    
+    private static final String FILTER_ENABLED = "light_filter_enabled";
     private static final String FILTER_WINDOW = "light_filter_window";
     private static final String FILTER_RESET = "light_filter_reset";
     private static final String FILTER_INTERVAL = "light_filter_interval";
@@ -64,7 +62,7 @@ public class Backlight extends SettingsPreferenceFragment implements
         mFilterEnabled.setChecked(Settings.System.getInt(cr,
                 Settings.System.LIGHT_FILTER, 0) != 0);
         mFilterEnabled.setOnPreferenceChangeListener(this);
-        
+
         mFilterReset = (ListPreference) prefSet.findPreference(FILTER_RESET);
         mFilterReset.setValue(String.valueOf(Settings.System.getInt(cr,
                 Settings.System.LIGHT_FILTER_RESET, -1)));
@@ -74,7 +72,7 @@ public class Backlight extends SettingsPreferenceFragment implements
         mFilterWindow.setValue(String.valueOf(Settings.System.getInt(cr,
                 Settings.System.LIGHT_FILTER_WINDOW, 30000)));
         mFilterWindow.setOnPreferenceChangeListener(this);
-        
+
         mFilterInterval = (ListPreference) prefSet.findPreference(FILTER_INTERVAL);
         mFilterInterval.setValue(String.valueOf(Settings.System.getInt(cr,
                 Settings.System.LIGHT_FILTER_INTERVAL, 1000)));
@@ -108,10 +106,10 @@ public class Backlight extends SettingsPreferenceFragment implements
         if (preference == mFilterEnabled) {
             Settings.System.putInt(getActivity().getApplicationContext().getContentResolver(),
                     Settings.System.LIGHT_FILTER, getBoolean(newValue) ? 1 : 0);
-            handled = true;        
+            handled = true;
         } else if (preference == mFilterWindow) {
             Settings.System.putInt(getActivity().getApplicationContext().getContentResolver(),
-                    Settings.System.LIGHT_FILTER_WINDOW, getInt(newValue));            
+                    Settings.System.LIGHT_FILTER_WINDOW, getInt(newValue));
             handled = true;
         } else if (preference == mFilterReset) {
             Settings.System.putInt(getActivity().getApplicationContext().getContentResolver(),
@@ -138,21 +136,23 @@ public class Backlight extends SettingsPreferenceFragment implements
                     Settings.System.LIGHT_HYSTERESIS, getInt(newValue));
             handled = true;
         }
-        
+
         // Force the system to reload settings and reinit
         if (handled) {
-            long tag = Settings.System.getLong(getActivity().getApplicationContext().getContentResolver(),
-                Settings.System.LIGHTS_CHANGED, 0) + 1;
-            Settings.System.putLong(getActivity().getApplicationContext().getContentResolver(), Settings.System.LIGHTS_CHANGED, tag);
+            long tag = Settings.System.getLong(getActivity().getApplicationContext()
+                    .getContentResolver(),
+                    Settings.System.LIGHTS_CHANGED, 0) + 1;
+            Settings.System.putLong(getActivity().getApplicationContext().getContentResolver(),
+                    Settings.System.LIGHTS_CHANGED, tag);
         }
 
         return handled;
     }
-    
+
     private boolean getBoolean(Object o) {
         return Boolean.valueOf(o.toString());
     }
-    
+
     private int getInt(Object o) {
         return Integer.valueOf(o.toString());
     }

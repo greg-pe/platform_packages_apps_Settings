@@ -21,65 +21,19 @@ import android.content.DialogInterface;
 import android.os.Bundle;
 import android.os.SystemProperties;
 import android.preference.CheckBoxPreference;
-import android.preference.ListPreference;
 import android.preference.Preference;
-import android.preference.PreferenceActivity;
-import android.preference.PreferenceCategory;
 import android.preference.PreferenceScreen;
-import android.provider.Settings;
-
-import java.io.File;
-
-import com.android.settings.R;
 
 /**
  * Performance Settings
  */
-public class PerformanceSettings extends SettingsPreferenceFragment 
-	implements Preference.OnPreferenceChangeListener {
+public class PerformanceSettings extends SettingsPreferenceFragment
+        implements Preference.OnPreferenceChangeListener {
     private static final String TAG = "PerformanceSettings";
 
-    private static final String UI_PROCESSOR = "processor";
+    private static final String PROCESSOR = "processor";
 
-    private static final String ZRAM_PREF = "pref_zram_size";
-
-    private static final String ZRAM_PERSIST_PROP = "persist.service.zram";  // was compcache
-
-    private static final String ZRAM_DEFAULT = SystemProperties.get("ro.zram.default"); // was compcache
-
-    private static final String JIT_PREF = "pref_jit_mode";
-
-    private static final String JIT_ENABLED = "int:jit";
-
-    private static final String JIT_DISABLED = "int:fast";
-
-    private static final String JIT_PERSIST_PROP = "persist.sys.jit-mode";
-
-    private static final String JIT_PROP = "dalvik.vm.execution-mode";
-
-    private static final String HEAPSIZE_PREF = "pref_heapsize";
-
-    private static final String HEAPSIZE_PROP = "dalvik.vm.heapsize";
-
-    private static final String HEAPSIZE_PERSIST_PROP = "persist.sys.vm.heapsize";
-
-    private static final String HEAPSIZE_DEFAULT = "16m";
-
-    private static final String USE_DITHERING_PREF = "pref_use_dithering";
-
-    private static final String USE_DITHERING_PERSIST_PROP = "persist.sys.use_dithering";
-    
-    private static final String USE_DITHERING_DEFAULT = "1";
-
-    private static final String USE_16BPP_ALPHA_PREF = "pref_use_16bpp_alpha";
-
-    private static final String USE_16BPP_ALPHA_PROP = "persist.sys.use_16bpp_alpha";
-
-    private static final String PURGEABLE_ASSETS_PREF = "pref_purgeable_assets";
-
-    private static final String PURGEABLE_ASSETS_PERSIST_PROP = "persist.sys.purgeable_assets";
-
-    private static final String PURGEABLE_ASSETS_DEFAULT = "0";
+    private static final String MEMORY_MANAGEMENT = "memory_management";
 
     private static final String DISABLE_BOOTANIMATION_PREF = "pref_disable_bootanimation";
 
@@ -87,188 +41,66 @@ public class PerformanceSettings extends SettingsPreferenceFragment
 
     private static final String DISABLE_BOOTANIMATION_DEFAULT = "0";
 
-    private static final String LOCK_LAUNCHER_PREF = "pref_lock_launcher";
-
-    private static final String LOCK_MESSAGING_PREF = "pref_lock_messaging";
-
-    private static final int LOCK_LAUNCHER_DEFAULT = 0;
-
-    private static final int LOCK_MESSAGING_DEFAULT = 0;
-    
-    private ListPreference mCompcachePref;
-
-    private CheckBoxPreference mJitPref;
-
-    private CheckBoxPreference mUseDitheringPref;
-
-    private CheckBoxPreference mUse16bppAlphaPref;
-
-    private CheckBoxPreference mPurgeableAssetsPref;
-
     private CheckBoxPreference mDisableBootanimPref;
 
-    private ListPreference mHeapsizePref;
-
     private PreferenceScreen mProcessor;
-    
-    private CheckBoxPreference mLockLauncherPref;
 
-    private CheckBoxPreference mLockMessagingPref;
+    private PreferenceScreen mMemoryManagement;
 
     private AlertDialog alertDialog;
 
-    private int swapAvailable = -1;
-
-
     @Override
-	public void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        if(getPreferenceManager() != null) {
-	
-	        addPreferencesFromResource(R.xml.performance_settings);
-	
-	        PreferenceScreen prefSet = getPreferenceScreen();
+        if (getPreferenceManager() != null) {
 
-	        mProcessor = (PreferenceScreen) prefSet.findPreference(UI_PROCESSOR);
-	        mCompcachePref = (ListPreference) prefSet.findPreference(ZRAM_PREF);
-	        mJitPref = (CheckBoxPreference) prefSet.findPreference(JIT_PREF);
-	        mUseDitheringPref = (CheckBoxPreference) prefSet.findPreference(USE_DITHERING_PREF);
-	        mUse16bppAlphaPref = (CheckBoxPreference) prefSet.findPreference(USE_16BPP_ALPHA_PREF);
-	        mPurgeableAssetsPref = (CheckBoxPreference) prefSet.findPreference(PURGEABLE_ASSETS_PREF);
-	        mHeapsizePref = (ListPreference) prefSet.findPreference(HEAPSIZE_PREF);
-	        mDisableBootanimPref = (CheckBoxPreference) prefSet.findPreference(DISABLE_BOOTANIMATION_PREF);
+            addPreferencesFromResource(R.xml.performance_settings);
 
-	        if (isSwapAvailable()) {
-		    	if (SystemProperties.get(ZRAM_PERSIST_PROP) == "1") 
-	                	SystemProperties.set(ZRAM_PERSIST_PROP, ZRAM_DEFAULT);
-	            	mCompcachePref.setValue(SystemProperties.get(ZRAM_PERSIST_PROP, ZRAM_DEFAULT));
-	            	mCompcachePref.setOnPreferenceChangeListener(this);
-        	} else {
-            	prefSet.removePreference(mCompcachePref);
-	        }
-	        
-	        String jitMode = SystemProperties.get(JIT_PERSIST_PROP, SystemProperties.get(JIT_PROP, JIT_ENABLED));
-	        mJitPref.setChecked(JIT_ENABLED.equals(jitMode));
-	        String useDithering = SystemProperties.get(USE_DITHERING_PERSIST_PROP, USE_DITHERING_DEFAULT);
-	        mUseDitheringPref.setChecked("1".equals(useDithering));
-	
-	        String use16bppAlpha = SystemProperties.get(USE_16BPP_ALPHA_PROP, "0");
-	        mUse16bppAlphaPref.setChecked("1".equals(use16bppAlpha));
-	
-	        String purgeableAssets = SystemProperties.get(PURGEABLE_ASSETS_PERSIST_PROP, PURGEABLE_ASSETS_DEFAULT);
-	        mPurgeableAssetsPref.setChecked("1".equals(purgeableAssets));
-	
-	        mHeapsizePref.setValue(SystemProperties.get(HEAPSIZE_PERSIST_PROP, SystemProperties.get(HEAPSIZE_PROP, HEAPSIZE_DEFAULT)));
-	        mHeapsizePref.setOnPreferenceChangeListener(this);
+            PreferenceScreen prefSet = getPreferenceScreen();
 
-	        String disableBootanimation = SystemProperties.get(DISABLE_BOOTANIMATION_PERSIST_PROP, DISABLE_BOOTANIMATION_DEFAULT);
-	        mDisableBootanimPref.setChecked("1".equals(disableBootanimation));
+            mProcessor = (PreferenceScreen) prefSet.findPreference(PROCESSOR);
+            mMemoryManagement = (PreferenceScreen) prefSet.findPreference(MEMORY_MANAGEMENT);
+            mDisableBootanimPref = (CheckBoxPreference) prefSet
+                    .findPreference(DISABLE_BOOTANIMATION_PREF);
 
-	        mLockLauncherPref = (CheckBoxPreference) prefSet.findPreference(LOCK_LAUNCHER_PREF);
-	        mLockLauncherPref.setChecked(Settings.System.getInt(getContentResolver(),
-	                Settings.System.LOCK_LAUNCHER_IN_MEMORY, LOCK_LAUNCHER_DEFAULT) == 1);
+            String disableBootanimation = SystemProperties.get(DISABLE_BOOTANIMATION_PERSIST_PROP,
+                    DISABLE_BOOTANIMATION_DEFAULT);
+            mDisableBootanimPref.setChecked("1".equals(disableBootanimation));
 
-	        mLockMessagingPref = (CheckBoxPreference) prefSet.findPreference(LOCK_MESSAGING_PREF);
-	        mLockMessagingPref.setChecked(Settings.System.getInt(getActivity().getApplicationContext().getContentResolver(),
-	                Settings.System.LOCK_MESSAGING_IN_MEMORY, LOCK_MESSAGING_DEFAULT) == 1);
+            /* Display the warning dialog */
+            alertDialog = new AlertDialog.Builder(getActivity()).create();
+            alertDialog.setTitle(R.string.performance_settings_warning_title);
+            alertDialog.setMessage(getResources().getString(R.string.performance_settings_warning));
+            alertDialog.setButton(DialogInterface.BUTTON_POSITIVE,
+                    getResources().getString(com.android.internal.R.string.ok),
+                    new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int which) {
+                            return;
+                        }
+                    });
 
-	        
-	        /* Display the warning dialog */ 
-	        alertDialog = new AlertDialog.Builder(getActivity()).create();
-	        alertDialog.setTitle(R.string.performance_settings_warning_title);
-	        alertDialog.setMessage(getResources().getString(R.string.performance_settings_warning));
-	        alertDialog.setButton(DialogInterface.BUTTON_POSITIVE,
-	                getResources().getString(com.android.internal.R.string.ok),
-	                new DialogInterface.OnClickListener() {
-	            		public void onClick(DialogInterface dialog, int which) {
-	            			return;
-	            		}
-	        });
-	
-	        alertDialog.show();
+            alertDialog.show();
         }
     }
+
     @Override
     public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
-	
-        if(preference == mProcessor) {
-            startFragment(null, mProcessor.getFragment(), -1, null);
-        }
-
-    	if (preference == mJitPref) {
-            SystemProperties.set(JIT_PERSIST_PROP,
-                    mJitPref.isChecked() ? JIT_ENABLED : JIT_DISABLED);
-            return true;
-        }
-
-        if (preference == mUseDitheringPref) {
-            SystemProperties.set(USE_DITHERING_PERSIST_PROP,
-                    mUseDitheringPref.isChecked() ? "1" : "0");
-            return true;
-        }
-
-        if (preference == mUse16bppAlphaPref) {
-            SystemProperties.set(USE_16BPP_ALPHA_PROP,
-                    mUse16bppAlphaPref.isChecked() ? "1" : "0");
-            return true;
-        }
-
-        if (preference == mPurgeableAssetsPref) {
-            SystemProperties.set(PURGEABLE_ASSETS_PERSIST_PROP,
-                    mPurgeableAssetsPref.isChecked() ? "1" : "0");
-            return true;
-        }
-
-        if (preference == mDisableBootanimPref) {
+       
+       if (preference == mDisableBootanimPref) {
             SystemProperties.set(DISABLE_BOOTANIMATION_PERSIST_PROP,
                     mDisableBootanimPref.isChecked() ? "1" : "0");
-            return true;
+        } else {
+            // If we didn't handle it, let preferences handle it.
+            return super.onPreferenceTreeClick(preferenceScreen, preference);
         }
 
-        if (preference == mLockLauncherPref) {
-            Settings.System.putInt(getActivity().getApplicationContext().getContentResolver(), 
-                    Settings.System.LOCK_LAUNCHER_IN_MEMORY, mLockLauncherPref.isChecked() ? 1 : 0);
-            return true;
-        }
-
-        if (preference == mLockMessagingPref) {
-            Settings.System.putInt(getActivity().getApplicationContext().getContentResolver(),
-                    Settings.System.LOCK_MESSAGING_IN_MEMORY, mLockMessagingPref.isChecked() ? 1 : 0);
-            return true;
-        }
-
-        
-        return false;
+        return true;
     }
 
     public boolean onPreferenceChange(Preference preference, Object newValue) {
-        if (preference == mHeapsizePref) {
-            if (newValue != null) {
-                SystemProperties.set(HEAPSIZE_PERSIST_PROP, (String)newValue);
-                return true;
-            }
-        }
-
-        if (preference == mCompcachePref) {
-            if (newValue != null) {
-                SystemProperties.set(ZRAM_PERSIST_PROP, (String)newValue);
-                return true;
-	    }
-        }
 
         return false;
     }
 
-    /**
-     * Check if swap support is available on the system
-     */
-    private boolean isSwapAvailable() {
-        if (swapAvailable < 0) {
-            swapAvailable = new File("/proc/swaps").exists() ? 1 : 0;
-        }
-        return swapAvailable > 0;
-    }
-
 }
-

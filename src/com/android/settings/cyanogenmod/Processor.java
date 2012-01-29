@@ -16,22 +16,21 @@
 
 package com.android.settings.cyanogenmod;
 
-import android.os.Bundle;
-import android.os.Handler;
-import android.os.Message;
-import android.preference.ListPreference;
-import android.preference.Preference;
-import android.preference.PreferenceActivity;
-import android.preference.PreferenceScreen;
-import android.util.Log;
-
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 
-import com.android.settings.SettingsPreferenceFragment;
+import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
+import android.preference.ListPreference;
+import android.preference.Preference;
+import android.preference.PreferenceScreen;
+import android.util.Log;
+
 import com.android.settings.R;
+import com.android.settings.SettingsPreferenceFragment;
 
 //
 // CPU Related Settings
@@ -102,7 +101,7 @@ public class Processor extends SettingsPreferenceFragment implements
         String[] availableFrequencies = new String[0];
         String availableFrequenciesLine = readOneLine(FREQ_LIST_FILE);
         if (availableFrequenciesLine != null)
-             availableFrequencies = availableFrequenciesLine.split(" ");
+            availableFrequencies = availableFrequenciesLine.split(" ");
         String[] frequencies;
         String temp;
 
@@ -217,9 +216,11 @@ public class Processor extends SettingsPreferenceFragment implements
                 if (preference == mGovernorPref) {
                     mGovernorPref.setSummary(String.format(mGovernorFormat, (String) newValue));
                 } else if (preference == mMinFrequencyPref) {
-                    mMinFrequencyPref.setSummary(String.format(mMinFrequencyFormat, toMHz((String) newValue)));
+                    mMinFrequencyPref.setSummary(String.format(mMinFrequencyFormat,
+                            toMHz((String) newValue)));
                 } else if (preference == mMaxFrequencyPref) {
-                    mMaxFrequencyPref.setSummary(String.format(mMaxFrequencyFormat, toMHz((String) newValue)));
+                    mMaxFrequencyPref.setSummary(String.format(mMaxFrequencyFormat,
+                            toMHz((String) newValue)));
                 }
                 return true;
             } else {
@@ -263,6 +264,7 @@ public class Processor extends SettingsPreferenceFragment implements
     }
 
     private String toMHz(String mhzString) {
-        return new StringBuilder().append(Integer.valueOf(mhzString) / 1000).append(" MHz").toString();
+        return new StringBuilder().append(Integer.valueOf(mhzString) / 1000).append(" MHz")
+                .toString();
     }
 }

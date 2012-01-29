@@ -733,11 +733,15 @@
 
     <!-- System Interface settings #CM -->
     <string name="system_settings_title">System</string>
+    <string name="system_interface_title">System interface</string>
     
-    <!-- Notification Widgets #CM -->
-    <string name="title_widget_buttons">Notification power widget</string>
-    <string name="title_expanded_widget">Notification power widget</string>
-    <string name="summary_expanded_widget">Enable the power widget in the notification drawer</string>
+    <!-- Notification Drawer #CM -->
+    <string name="notification_drawer_title">Notification drawer</string>
+
+    <!-- Power Widget #CM -->
+    <string name="power_widget_title">Power widget</string>
+    <string name="title_expanded_widget">Show power widget</string>
+    <string name="summary_expanded_widget">Show the power widget in the notification drawer</string>
     <string name="title_expanded_hide_onchange">Hide on change</string>
     <string name="summary_expanded_hide_onchange">Hide the notification drawer after toggling a widget button</string>
     <string name="title_expanded_hide_indicator">Hide indicator</string>
@@ -787,9 +791,32 @@
     <string name="pref_flash_mode_title">Flash mode</string>
     <string name="pref_flash_mode_summary">Choose High / Death Ray</string>
 
-    <!-- Notification Widget, Haptic feedback #CM -->
+    <!-- Power Widget, Haptic feedback #CM -->
     <string name="expanded_haptic_feedback_title">Haptic Feedback</string>
     <string name="expanded_haptic_feedback_summary">Enable/Disable haptic feedback.</string>
+
+    <!-- Status bar #CM -->
+    <string name="status_bar_title">Status bar</string>
+    <string name="status_bar_clock_title">Clock</string>
+    <string name="status_bar_general_title">General</string>
+    <string name="status_bar_show_clock_title">Show clock</string>
+    <string name="status_bar_show_clock_summary">Show the clock in the Status bar</string>
+    <string name="status_bar_am_pm_title">AM/PM style</string>
+    <string name="status_bar_am_pm_summary">Display style of AM/PM next to clock</string>
+    <string name="status_bar_battery_title">Battery status style</string>
+    <string name="status_bar_battery_summary">Display style of battery status</string>
+    <string name="status_bar_toggle_brightness">Brightness control</string>
+    <string name="status_bar_toggle_brightness_summary">Allows adjusting of brightness by sliding across statusbar</string>
+    <string name="status_bar_toggle_info">Automatic brightness is enabled</string>
+    <string name="status_bar_cm_signal_text_title">Alternate signal display</string>
+    <string name="status_bar_cm_signal_text_summary">Show dBm value instead of signal bars</string>
+    <string name="status_bar_cm_signal_text_show_bars">Signal bars</string>
+    <string name="status_bar_cm_signal_text_show_text">Signal text</string>
+    <string name="status_bar_cm_signal_text_show_text_dbm">Signal text w/dBm</string>
+
+    <!-- Lock screen #CM -->
+    <string name="lock_screen_title">Lock screen</string>
+    <!-- Lock Screen -->
 
     <!-- Wallpaper settings title [CHAR LIMIT=30] -->
     <string name="wallpaper_settings_title">Wallpaper</string>
@@ -829,6 +856,24 @@
     <string name="cdma_security_settings_summary">Set My Location, screen unlock, credential storage lock</string>
     <!-- In the security screen, the header title for settings related to  Passwords-->
     <string name="security_passwords_title">Passwords</string>
+    <!-- Screen security - Screen security  #CM -->
+    <string name="screen_security_category">Screen Security</string>
+    <string name="screen_security_title">Lock screen</string>
+    <string name="screen_security_summary">View or change lock screen security, delay and timeout settings</string>
+    <string name="additional_options_title">Additional options</string>
+    <string name="unlock_menu_unlock_title">Menu unlock</string>
+    <string name="unlock_menu_unlock_summary">Pressing the menu button unlocks the device</string>
+    <string name="unlock_quick_unlock_control_title">Quick Unlock</string>
+    <string name="unlock_quick_unlock_control_summary">No need to press OK when entering Pin or Password. Delete counts as bad try</string>
+
+    <!-- Delays and timeouts -->
+    <string name="delay_and_timeout_title">Lock delay</string>
+    <!-- Slide lock delay -->
+    <string name="slide_lock_delay_title">Delay screen lock</string>
+    <string name="slide_lock_timeout_delay_title">Screen timeout delay</string>
+    <string name="slide_lock_timeout_delay_summary">How long to delay before enabling screen lock when screen times out</string>
+    <string name="slide_lock_screenoff_delay_title">Screen turned off delay</string>
+    <string name="slide_lock_screenoff_delay_summary">How long to delay before enabling screen lock when screen is turned off</string>
 
     <!-- Title of the preferences category for preference items to control encryption -->
     <string name="crypt_keeper_settings_title">Encryption</string>
@@ -1292,11 +1337,11 @@
     <!-- Performance Settings : Processor settings sub items -->
     <string name="cpu_cur_freq_title">Current CPU frequency</string>
     <string name="cpu_governors_title">CPU governor</string>
-    <string name="cpu_governors_summary">Currently: %S</string>
+    <string name="cpu_governors_summary">%S</string>
     <string name="cpu_min_freq_title">Minimum CPU frequency</string>
-    <string name="cpu_min_freq_summary">Currently: %s</string>
+    <string name="cpu_min_freq_summary">%s</string>
     <string name="cpu_max_freq_title">Maximum CPU frequency</string>
-    <string name="cpu_max_freq_summary">Currently: %s</string>
+    <string name="cpu_max_freq_summary">%s</string>
     <string name="cpu_set_on_boot">Set on boot</string>
     <string name="cpu_set_on_boot_summary">Restore the processor settings on boot</string>
 
@@ -1304,37 +1349,26 @@
     <string name="pref_disable_bootanimation_title">Disable boot animation</string>
     <string name="pref_disable_bootanimation_summary">Don\'t show the boot animation for faster boot</string>
 
-    <!-- Performance : Lock launcher in memory -->
-    <string name="pref_lock_launcher_title">Lock launcher in RAM</string>
-    <string name="pref_lock_launcher_summary">Attempt to keep the default launcher app in memory at all times</string>
-
-    <!-- Performance : Lock mms app in memory -->
-    <string name="pref_lock_messaging_title">Lock messaging app in RAM</string>
-    <string name="pref_lock_messaging_summary">Attempt to keep the default messaging app in memory at all times</string>
-
-    <!-- Performance Settings : zRam -->
+    <!-- Memory Management -->
+    <string name="memory_management_title">Memory management</string>
+    <string name="memory_management_summary">Customize the usage of memory to alter system performance</string>
+    <!-- zRam -->
     <string name="pref_zram_title">zRam</string>
     <string name="pref_zram_summary">Compress memory for increased virtual capacity (requires reboot)</string>
-
-    <!-- Performance Settings : JIT Mode -->
-    <string name="pref_jit_mode_title">JIT</string>
-    <string name="pref_jit_mode_summary">Use the Dalvik just-in-time compiler (requires reboot)</string>
+    <!-- VM Heap Size -->
+    <string name="pref_heapsize_title">VM heap size</string>
+    <string name="pref_heapsize_summary">Maximum amount of memory per VM heap (requires reboot)</string>
+    <!-- Purgeable Assets -->
+    <string name="pref_purgeable_assets_title">Allow purging of assets</string>
+    <string name="pref_purgeable_assets_summary">Purging of bitmap memory assets allows the freeing of more RAM when needed (requires reboot)</string>
 
     <!-- Performance Settings : Dithering -->
     <string name="pref_use_dithering_title">Surface dithering</string>
-    <string name="pref_use_dithering_summary">Dithering surfaces improves image quality on certain displays at the cost of performance (requires reboot)</string>
+    <string name="pref_use_dithering_summary">Dithering improves image quality on some displays at the cost of performance (requires reboot)</string>
 
     <!-- Performance Settings : 16bpp Alpha -->
     <string name="pref_use_16bpp_alpha_title">16bit transparency</string>
     <string name="pref_use_16bpp_alpha_summary">Better graphics performance, but lower quality and may cause visual artifacts (requires reboot)</string>
-
-    <!-- Performance Settings : Purgeable Assets -->
-    <string name="pref_purgeable_assets_title">Allow purging of assets</string>
-    <string name="pref_purgeable_assets_summary">Purging of bitmap memory assets allows the system to be able to free more RAM when needed (requires reboot)</string>
-
-    <!-- Performance Settings : VM Heap Size -->
-    <string name="pref_heapsize_title">VM heap size</string>
-    <string name="pref_heapsize_summary">Maximum amount of memory per VM heap (requires reboot)</string>
 
     <!-- About Device -->
     <!-- Status -->
@@ -3991,8 +4025,6 @@ found in the list of installed apps.</string>
     <string name="power_sounds_enable_title">Low battery sound</string>
     <!-- Sound settings screen, setting option summary text -->
     <string name="power_sounds_enable_summary">Play sound with the low battery alert</string>
-    <!-- About phone screen,  seeting option name-->
-    <string name="rom_version">ROM Version</string>
     <!-- Launcher settings -->
     <string name="cmlauncher_settings_title">Trebuchet</string>
     <!-- CPU Settings -->

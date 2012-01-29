@@ -1,3 +1,4 @@
+
 package com.android.settings.cyanogenmod;
 
 import android.app.Activity;
@@ -192,7 +193,7 @@ public class LightLevelsActivity extends Activity implements OnClickListener {
     private void dialogOk() {
         boolean changed = false;
         try {
-            int value = Integer.valueOf(mEditor.getText().toString());            
+            int value = Integer.valueOf(mEditor.getText().toString());
             int valLimitHi = android.os.Power.BRIGHTNESS_ON;
             if (mEditedId == -1337) {
                 if (value > 1 && value != (mLevels.length + 1)) {
@@ -354,14 +355,14 @@ public class LightLevelsActivity extends Activity implements OnClickListener {
             boolean autoLcd = Settings.System.getInt(getContentResolver(),
                     Settings.System.SCREEN_BRIGHTNESS_MODE, 1337) == Settings.System.SCREEN_BRIGHTNESS_MODE_AUTOMATIC;
             boolean filterEnabled = Settings.System.getInt(getContentResolver(),
-                Settings.System.LIGHT_FILTER, 0) != 0;
+                    Settings.System.LIGHT_FILTER, 0) != 0;
 
             try {
                 IPowerManager power = IPowerManager.Stub.asInterface(ServiceManager
                         .getService("power"));
                 if (filterEnabled && autoLcd) {
                     mSensor.setText(String.valueOf(power.getLightSensorValue()) + " / "
-                        + String.valueOf(power.getRawLightSensorValue()));
+                            + String.valueOf(power.getRawLightSensorValue()));
                 } else {
                     String value = String.valueOf(power.getLightSensorValue());
                     mSensor.setText(value + " / " + value);
@@ -433,7 +434,8 @@ public class LightLevelsActivity extends Activity implements OnClickListener {
             row.addView(createButton(2000 + i, String.valueOf(mLevels[i])));
 
             // Upper
-            row.addView(createTextView(1000 + i + 1, String.valueOf(Math.max(0, mLevels[i + 1] - 1))));
+            row.addView(createTextView(1000 + i + 1,
+                    String.valueOf(Math.max(0, mLevels[i + 1] - 1))));
 
             // Screen
             row.addView(createButton(3000 + i + 1, String.valueOf(mLcdValues[i + 1])));
@@ -452,26 +454,22 @@ public class LightLevelsActivity extends Activity implements OnClickListener {
         row = createRow();
 
         // Lower
-        row.addView(createButton(2000 + mLevels.length - 1, String
-                .valueOf(mLevels[mLevels.length - 1])));
+        row.addView(createButton(2000 + mLevels.length - 1,
+                String.valueOf(mLevels[mLevels.length - 1])));
 
         // Upper
         row.addView(createTextView((int) 1e10, String.valueOf((char) '\u221e')));
 
         // Screen
-        row
-                .addView(createButton(3000 + mLevels.length, String
-                        .valueOf(mLcdValues[mLevels.length])));
+        row.addView(createButton(3000 + mLevels.length, String.valueOf(mLcdValues[mLevels.length])));
 
         // Buttons
-        row
-                .addView(createButton(4000 + mLevels.length, String
-                        .valueOf(mBtnValues[mLevels.length])));
+        row.addView(createButton(4000 + mLevels.length, String.valueOf(mBtnValues[mLevels.length])));
 
         // Keyboard
         if (mHasKeyboard) {
-            row.addView(createButton(5000 + mLevels.length, String
-                    .valueOf(mKbValues[mLevels.length])));
+            row.addView(createButton(5000 + mLevels.length,
+                    String.valueOf(mKbValues[mLevels.length])));
         }
 
         table.addView(row, table.getChildCount());
