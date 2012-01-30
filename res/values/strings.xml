@@ -1613,6 +1613,7 @@
     <!-- Battery Info screen. Value for a status item. Used for diagnostic info screens, precise translation isn't needed -->
     <string name="battery_info_health_cold">Cold</string>
 
+<<<<<<< HEAD
     <!-- Used as setting title (for checkbox) on second screen after selecting Bluetooth settings -->
     <string name="bluetooth">Bluetooth</string>
     <!-- Bluetooth settings screen, check box label when the Bluetooth device can be seen by others -->
@@ -1968,6 +1969,71 @@
     <string name="sd_card_settings_label" product="default">SD card</string>
     <!-- The title of the activity to adjust proxy settings -->
     <string name="proxy_settings_label">Proxy settings</string>
+=======
+    <!-- Sound and alerts settings -->
+    <skip/>
+    <!-- Main Settings screen setting option name to go into the display settings screen -->
+    <string name="display_settings_title">Display</string>
+    <!-- Sound settings screen heading -->
+    <string name="sound_settings">Sound</string>
+    <!-- Sound settings screen, setting option name checkbox -->
+    <string name="silent_mode_title">Silent mode</string>
+    <!-- Sound settings screen, setting option name to pick ringtone (a list dialog comes up)-->
+    <string name="ringtone_title">Phone ringtone</string>
+    <!-- Sound settings screen, setting option summary text -->
+    <string name="ringtone_summary">""</string>
+    <!-- Sound settings screen, volume title -->
+    <string name="all_volume_title">Volumes</string>
+    <!-- Sound settings screen, music effects title [CHAR LIMIT=30]-->
+    <string name="musicfx_title">Music effects</string>
+    <!-- Sound settings screen, setting option name -->
+    <string name="ring_volume_title">Ringer volume</string>
+    <!-- Sound settings screen, setting option name checkbox -->
+    <string name="vibrate_in_silent_title">Vibrate when silent</string>
+    <!-- Sound settings screen, setting option name checkbox -->
+    <string name="vibrate_on_ring_title">Vibrate and ring</string>
+    <!-- Sound settings screen, setting option name -->
+    <string name="notification_sound_title">Default notification</string>
+    <!-- Sound settings screen, notification light repeat pulsing title -->
+    <string name="notification_pulse_title">Pulse notification light</string>
+    <!-- Sound settings screen, the title of the volume bar to adjust the incoming call volume -->
+    <string name="incoming_call_volume_title">Ringtone</string>
+    <!-- Sound settings screen, the title of the volume bar to adjust the notification volume -->
+    <string name="notification_volume_title">Notification</string>
+    <!-- Sound settings screen, the caption of the checkbox for having the notification volume be
+         the same as the incoming call volume. -->
+    <string name="checkbox_notification_same_as_incoming_call">Use incoming call volume for notifications</string>
+    <!-- Sound settings screen, setting option title-->
+    <string name="notification_sound_dialog_title">Choose notification ringtone</string>
+    <!-- Sound settings screen, setting option name -->
+    <string name="media_volume_title">Media</string>
+    <!-- Sound settings screen, setting option summary text -->
+    <string name="media_volume_summary">Set volume for music and videos</string>
+    <!-- Sound settings screen, alarm volume slider title -->
+    <string name="alarm_volume_title">Alarm</string>
+    <!-- Sound settings screen, dock settings summary-->
+    <string name="dock_settings_summary">Audio settings for the attached dock</string>
+    <!-- Sound settings screen, setting check box label -->
+    <string name="dtmf_tone_enable_title">Dial pad touch tones</string>
+    <!-- Sound settings screen, setting check box label -->
+    <string name="sound_effects_enable_title">Touch sounds</string>
+    <!-- Sound settings screen, setting check box label -->
+    <string name="lock_sounds_enable_title">Screen lock sound</string>
+    <!-- Sound settings screen, setting check box label -->
+    <string name="haptic_feedback_enable_title">Vibrate on touch</string>
+    <!-- Sound settings screen, setting option name checkbox to enable/disable audio recording features that improve audio recording in noisy environments -->
+    <string name="audio_record_proc_title">Noise cancellation</string>
+    <!-- Volume description for media volume -->
+    <string name="volume_media_description">Music, video, games, &amp; other media</string>
+    <!-- Volume description for ringtone and notification volume -->
+    <string name="volume_ring_description">Ringtone &amp; notifications</string>
+    <!-- Volume description for ringtone volume -->
+    <string name="volume_ring_only_description">Ringtones</string>
+    <!-- Volume description for notification volume -->
+    <string name="volume_notification_description">Notifications</string>
+    <!-- Volume description for alarm volume -->
+    <string name="volume_alarm_description">Alarms</string>
+>>>>>>> 7c85aff... add ability to separate ringtone & notification volumes
 
     <!-- ======================================================================================= -->
     <!-- NEW STUFF -->
@@ -4029,5 +4095,7 @@ found in the list of installed apps.</string>
     <string name="cmlauncher_settings_title">Trebuchet</string>
     <!-- CPU Settings -->
     <string name="cpu_settings_title">Cpu Settings</string>
+    <!--Ability to separate rintone and notification volumes -->
+    <string name="link_volume_ringtones">Link volumes</string>
 </resources>
 
