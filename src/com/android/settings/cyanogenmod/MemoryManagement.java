@@ -58,6 +58,7 @@ public class MemoryManagement extends SettingsPreferenceFragment implements
     private ListPreference mzRAM;
 
     private CheckBoxPreference mKSMPref;
+
     private ListPreference mHeapsizePref;
 
     private int swapAvailable = -1;
@@ -90,10 +91,6 @@ public class MemoryManagement extends SettingsPreferenceFragment implements
             } else {
                 prefSet.removePreference(mKSMPref);
             }
-
-            String purgeableAssets = SystemProperties.get(PURGEABLE_ASSETS_PERSIST_PROP,
-                    PURGEABLE_ASSETS_DEFAULT);
-            mPurgeableAssetsPref.setChecked("1".equals(purgeableAssets));
 
             mHeapsizePref.setValue(SystemProperties.get(HEAPSIZE_PERSIST_PROP,
                     SystemProperties.get(HEAPSIZE_PROP, HEAPSIZE_DEFAULT)));
