@@ -824,12 +824,6 @@
     <string name="lock_screen_title">Lock screen</string>
     <!-- Lock Screen -->
 
-    <!-- Input Settings -->
-    <string name="input_settings">Buttons</string>
-    <string name="input_settings_title">Buttons</string>
-    <string name="pref_volume_wake_title">Volume rocker wake</string>
-    <string name="pref_volume_wake_summary">Pressing the volume up/down wakes the device. Intended for devices with hard to press power key</string>
-
     <!-- Wallpaper settings title [CHAR LIMIT=30] -->
     <string name="wallpaper_settings_title">Wallpaper</string>
     <!-- Wallpaper settings fragment title [CHAR LIMIT=30] -->
@@ -2964,7 +2958,7 @@ found in the list of installed apps.</string>
     <!-- Setting checkbox summary for Whether to enable USB debugging support on the phone -->
     <string name="enable_adb_summary">Allow Android debug mode, the adb interface on USB (or on network)</string>
     <!-- Setting checkbox title for Whether debugging should run over TCP/IP. -->
-    <string name="adb_over_network">ADB over Network</string>
+    <string name="adb_over_network">ADB over network</string>
     <string name="adb_over_network_summary">Enable TCP/IP debugging over Network interfaces (Wi-Fi, Usb net). This setting is reset on reboot</string>
     <!-- Warning for Adb over Network -->
     <string name="adb_over_network_warning">WARNING: When ADB over Network is enabled, your phone is open for intrusions on all connected networks, including GSM data network !\n\nOnly use this feature when you are connected on trusted networks.\n\nDo you really want to enable this function ?</string>
@@ -3771,7 +3765,7 @@ found in the list of installed apps.</string>
         for background apps</string>
 
      <!-- UI debug setting: kill app long-press back [CHAR LIMIT=25] -->
-    <string name="kill_app_longpress_back">Kill App Back Button</string>
+    <string name="kill_app_longpress_back">Kill app back button</string>
     <!-- UI debug settting: kill app long-press back [CHAR LIMIT=50] -->
     <string name="kill_app_longpress_back_summary">Kill the foreground app by long-pressing
             the back key</string>
@@ -4047,5 +4041,11 @@ found in the list of installed apps.</string>
     <string name="link_volume_ringtones">Link volumes</string>
     <!-- Volume description for ringtone volume -->
     <string name="volume_ring_only_description">Ringtones</string>
+
+    <!-- Wakeup options -->
+    <string name="display_category_wakeup_options_title">Wakeup options</string>
+    <string name="pref_volume_wake_title">Volume rocker wake</string>
+    <string name="pref_volume_wake_summary">Pressing the volume up/down wakes the device. Intended for devices with hard to press power key</string>
+
 </resources>
 
