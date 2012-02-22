@@ -657,6 +657,224 @@
     <string name="automatic_brightness" msgid="5014143533884135461">"Ajuster automatiquement la luminosité"</string>
     <string name="title_font_size" msgid="4405544325522105222">"Taille de la police"</string>
     <string name="dialog_title_font_size" msgid="2231507851258955038">"Taille de police"</string>
+
+    <!-- Backlight #CM -->
+    <string name="backlight_title">Rétroéclairage automatique</string>
+    <string name="backlight_summary">Ajuster les niveaux et le filtrage</string>
+    <string name="light_filter_title">Filtrage du capteur de luminosité</string>
+    <string name="light_filter_enabled_title">Activé</string>
+    <string name="light_filter_enabled_summary">Appliquer un filtre de lissage aux mesures du capteur de lumière</string>
+    <string name="light_filter_window_title">Période moyenne</string>
+    <string name="light_filter_window_summary">La valeur filtrée est la valeur moyenne du capteur de lumière durant une certaine période</string>
+    <string name="light_filter_reset_title">Seuil de remise à zéro</string>
+    <string name="light_filter_reset_summary">Les mesures qui dépassent le seuil désactivent le filtre pour une meilleure réaction en extérieur</string>
+    <string name="light_filter_interval_title">Intervalle de capture</string>
+    <string name="light_filter_interval_summary">Une valeur plus basse améliore la réaction mais utilise plus le CPU</string>
+    <string name="light_levels_title">Niveaux de luminosité</string>
+    <string name="light_levels_enabled_title">Niveaux personnalisés</string>
+    <string name="light_levels_dim_title">Niveau réduit</string>
+    <string name="light_levels_dim_summary">Niveau utilisé pour le rétro-éclairage réduit</string>
+    <string name="light_levels_editor_title">Définir les autres niveaux\u2026</string>
+    <string name="light_decrease_enabled_title">Réduire l\'éclairage</string>
+    <string name="light_decrease_enabled_summary">Cocher pour permettre de réduire le rétro-éclairage. Utiliser l\'hystérésis pour limiter les variations</string>
+    <string name="light_decrease_hysteresis_title">Hystérésis</string>
+    <string name="light_decrease_hysteresis_summary">Sensor levels overlap this much downwards</string>
+
+    <!-- Light sensor levels #CM -->
+    <string name="ll_title">Niveaux de luminosité</string>
+    <string name="ll_header_upper">Max</string>
+    <string name="ll_header_lower">Min</string>
+    <string name="ll_header_lcd">Ecran</string>
+    <string name="ll_header_btn">Boutons</string>
+    <string name="ll_header_kb">Clavier</string>
+    <string name="ll_lux">Capteur filtré / brut :</string>
+    <string name="ll_lcd">Niveau écran :</string>
+    <string name="ll_btn">Niveau boutons :</string>
+    <string name="ll_kb">Clavier :</string>
+    <string name="ll_disabled">désactivé</string>
+    <string name="ll_default">Restaurer défaut</string>
+    <string name="ll_save">Enregister</string>
+    <string name="ll_reload">Recharger</string>
+    <string name="ll_bad_levels">Les niveaux doivent être croissants</string>
+    <string name="ll_num_levels">Nombre de niveaux</string>
+
+    <!-- Advanced, Device specific (DeviceParts) settings #CM -->
+    <string name="advanced_settings_title">Options spécifiques</string>
+
+<!-- INTERFACE Settings #CM -->
+    <!-- Settings main menu category heading. Interface (Launcher, Themes, System). [CHAR LIMIT=40] -->
+    <string name="header_category_interface">INTERFACE</string>
+
+    <!-- Launcher settings #CM -->
+    <string name="launcher_settings_title">Trebuchet</string>
+
+    <!-- Themes settings #CM -->
+    <string name="themes_settings_title">Thèmes</string>
+
+    <!-- System Interface settings #CM -->
+    <string name="system_settings_title">Système</string>
+    <string name="system_interface_title">Interface système</string>
+
+    <!-- Notification Drawer #CM -->
+    <string name="notification_drawer_title">Barre de notification</string>
+
+    <!-- Combined Bar #CM -->
+    <string name="combined_bar_title">Barre combinée</string>
+    <string name="combined_bar_auto_hide_title">Cacher automatiquement</string>
+    <string name="combined_bar_auto_hide_summary">Permet de cacher la barre combinée (boutons virtuels) pour les applications plein écran</string>
+
+    <!-- Power Widget #CM -->
+    <string name="power_widget_title">Gestion de l\'alimentation</string>
+    <string name="title_expanded_widget">Afficher le widget</string>
+    <string name="summary_expanded_widget">Afficher le contrôle rapide de l\'alimentation dans la barre de notification</string>
+    <string name="title_expanded_hide_onchange">Cacher après changement</string>
+    <string name="summary_expanded_hide_onchange">Masquer la barre de notification lorsqu\'un bouton du widget est cliqué</string>
+    <string name="title_expanded_hide_indicator">Cacher les indicateurs</string>
+    <string name="summary_expanded_hide_indicator">Masquer les indicateurs du widget</string>
+    <string name="title_expanded_hide_scrollbar">Cacher barre de défilement</string>
+    <string name="summary_expanded_hide_scrollbar">Masquer la barre de défilement s\'il y a trop de boutons dans le widget</string>
+    <string name="title_widget_picker">Boutons du widget</string>
+    <string name="summary_widget_picker">Choisir les boutons à afficher</string>
+    <string name="title_widget_order">Ordre des boutons</string>
+    <string name="summary_widget_order">Modifier l\'ordre des boutons présents sur le widget</string>
+    <string name="title_buttons">Boutons</string>
+    <string name="title_toggle_wifi">Wifi</string>
+    <string name="title_toggle_bluetooth">Bluetooth</string>
+    <string name="title_toggle_gps">GPS</string>
+    <string name="title_toggle_sound">Son</string>
+    <string name="title_toggle_brightness">Luminosité</string>
+    <string name="title_toggle_sync">Sync</string>
+    <string name="title_toggle_wifiap">Wifi AP</string>
+    <string name="title_toggle_screentimeout">Timeout écran</string>
+    <string name="title_toggle_mobiledata">Données mobile</string>
+    <string name="title_toggle_lockscreen">Verrouillage</string>
+    <string name="title_toggle_networkmode">Réseau mobile</string>
+    <string name="title_toggle_autorotate">Orientation</string>
+    <string name="title_toggle_airplane">Mode avion</string>
+    <string name="title_toggle_flashlight">Torche</string>
+    <string name="title_toggle_sleep">Mise en veille</string>
+    <string name="title_toggle_media_play_pause">Média: Lecture/Pause</string>
+    <string name="title_toggle_media_previous">Média: Précédent</string>
+    <string name="title_toggle_media_next">Média: Suivant</string>
+    <string name="title_toggle_wimax">WiMAX</string>
+    <string name="title_button_modes">Modes des boutons</string>
+    <string name="pref_brightness_mode_title">Modes de luminosité</string>
+    <string name="pref_brightness_mode_summary">Sélection des modes de fonctionnement du bouton Luminosité</string>
+    <string name="cm_brightness_mode_auto">Auto.</string>
+    <string name="cm_brightness_mode_dim">Réduit</string>
+    <string name="pref_network_mode_title">Réseau mobile</string>
+    <string name="pref_network_mode_summary">Sélection des types de réseaux pour le bouton 2G/3G</string>
+    <string name="pref_screentimeout_mode_title">Timeout de l\'écran</string>
+    <string name="pref_screentimeout_mode_summary">Sélection des modes du bouton Timeout de l\'écran</string>
+    <string name="pref_ring_mode_title">Sonnerie</string>
+    <string name="pref_ring_mode_summary">Sélection des modes de sonnerie disponibles</string>
+    <string name="cm_sound_mode_silent">Silencieux</string>
+    <string name="cm_sound_mode_vibrate">Vibreur</string>
+    <string name="cm_sound_mode_sound">Son</string>
+    <string name="cm_sound_mode_soundVibrate">Son+Vibreur</string>
+    <string name="pref_flash_mode_title">Torche</string>
+    <string name="pref_flash_mode_summary">Puissance de la diode</string>
+
+    <!-- Power Widget, Haptic feedback #CM -->
+    <string name="expanded_haptic_feedback_title">Retour haptique</string>
+    <string name="expanded_haptic_feedback_summary">Active ou non le retour haptique (vibration)</string>
+
+    <!-- Status bar #CM -->
+    <string name="status_bar_title">Barre d\'état</string>
+    <string name="status_bar_clock_title">Horloge</string>
+    <string name="status_bar_general_title">Général</string>
+    <string name="status_bar_show_clock_title">Afficher l\'heure</string>
+    <string name="status_bar_show_clock_summary">Afficher l\'heure dans la barre d\'état</string>
+    <string name="status_bar_am_pm_title">Indicateur AM/PM</string>
+    <string name="status_bar_am_pm_summary">Affiche l\'indicateur AM/PM à côté de l\'heure</string>
+    <string name="status_bar_battery_title">Batterie</string>
+    <string name="status_bar_battery_summary">Style de l\'indicateur de niveau de charge</string>
+    <string name="status_bar_toggle_brightness">Rétroéclairage</string>
+    <string name="status_bar_toggle_brightness_summary">Ajustement de la luminosité en glissant dans la barre</string>
+    <string name="status_bar_toggle_info">Le rétroéclairage automatique est activé</string>
+    <string name="status_bar_signal_text_title">Signal GSM alternatif</string>
+    <string name="status_bar_signal_text_summary">Afficher les dBm au lieu de l\'icône de signal</string>
+    <string name="status_bar_signal_text_show_bars">Icône</string>
+    <string name="status_bar_signal_text_show_text">Texte</string>
+    <string name="status_bar_signal_text_show_text_dbm">Texte+dBm</string>
+
+    <!-- Lock screen #CM -->
+    <string name="lock_screen_title">Ecran de verrouillage</string>
+    <!-- Lock Screen -->
+
+    <!-- Profiles settings #CM -->
+    <string name="profiles_settings_title">Profils</string>
+
+    <!-- Screen security - Screen security #CM -->
+    <string name="screen_security_category">Verrouillage de l\'écran</string>
+    <string name="screen_security_title">Ecran de verrouillage</string>
+    <string name="screen_security_summary">Options de l\'écran de verrouillage : style, délais et options diverses</string>
+    <string name="additional_options_title">Options supplémentaires</string>
+    <string name="unlock_menu_unlock_title">Déverrouiller par Menu</string>
+    <string name="unlock_menu_unlock_summary">Déverrouillage de l\'écran en appuyant sur le bouton Menu</string>
+    <string name="unlock_quick_unlock_control_title">Déverrouillage rapide</string>
+    <string name="unlock_quick_unlock_control_summary">Evite d\'appuyer sur OK lors de la saisie du code PIN ou du mot de passe.\nAttention : effacer compte comme un essai raté !</string>
+
+    <!-- Delays and timeouts -->
+    <string name="delay_and_timeout_title">Délai de verrouillage</string>
+    <!-- Slide lock delay -->
+    <string name="slide_lock_delay_title">Modifier les délais</string>
+    <string name="slide_lock_timeout_delay_title">Timeout écran</string>
+    <string name="slide_lock_timeout_delay_summary">Délai avant d\'activer l\'écran de sécurité lorsque l\'écran s\'éteint automatiquement</string>
+    <string name="slide_lock_screenoff_delay_title">Extinction manuelle</string>
+    <string name="slide_lock_screenoff_delay_summary">Délai utilisé lorsque l\'on éteint manuellement l\'écran</string>
+
+    <!-- Dev settings, apps #CM -->
+    <string name="adb_over_network">ADB sur TCP/IP</string>
+    <string name="adb_over_network_summary">"Activer le débogage sur toutes les interfaces (réseaux USB, Wi-Fi et Bluetooth)"</string>
+    <string name="adb_over_network_warning">"ATTENTION: Lorsque cette fonction est activée, votre téléphone est ouvert aux intrusions sur toutes les interfaces, y compris via le réseau mobile !\n\nIl est fortement conseillé de désactiver le réseau mobile avant d\'activer cette fonction.\n\nContinuer ?"</string>
+    <string name="kill_app_longpress_back">Tuer avec bouton Retour</string>
+    <string name="kill_app_longpress_back_summary">Permet de forcer la fermeture de l\'application en cours en appuyant longuement sur le bouton Retour</string>
+
+    <!-- Performance Settings #CM -->
+    <string name="performance_settings_warning_title">ATTENTION !</string>
+    <string name="performance_settings_warning">Les options présentes ici altèrent les performances du système, en bien ou en mal.\nElles ont des comportements différents selon les appareils et sont disponibles pour expérimentation.\nNous vous demandons de ne pas soumettre de rapport de bug à propos de celles-ci.</string>
+    <string name="pref_disable_bootanimation_title">Pas d\'animation de boot</string>
+    <string name="pref_disable_bootanimation_summary">Ne pas afficher l\'animation pour démarrer plus rapidement</string>
+    <string name="pref_use_dithering_title">Activer le tramage</string>
+    <string name="pref_use_dithering_summary">Le tramage (dithering) améliore la qualité des images sur certains écrans au détriment des performances (nécessite un redémarrage)</string>
+    <string name="pref_use_16bpp_alpha_title">Transparence 16 bits</string>
+    <string name="pref_use_16bpp_alpha_summary">Utiliser le mode 16 bits améliore la vitesse de défilement et des animations, mais peut affecter l\'affichage des éléments transparents (nécessite un redémarrage)</string>
+    <!-- Memory Management -->
+    <string name="memory_management_title">Gestion de la mémoire</string>
+    <string name="memory_management_summary">Options de gestion de la mémoire pour optimiser les performances</string>
+    <!-- zRam -->
+    <string name="pref_zram_title">Utiliser zRam</string>
+    <string name="pref_zram_summary">Compresser la mémoire pour augmenter virtuellement sa capacité (nécessite un redémarrage)</string>
+    <!-- VM Heap Size -->
+    <string name="pref_heapsize_title">Taille de pile VM</string>
+    <string name="pref_heapsize_summary">Maximum amount of memory per VM heap (nécessite un redémarrage)</string>
+    <!-- KSM -->
+    <string name="pref_ksm_title">Utiliser KSM</string>
+    <string name="pref_ksm_summary">Cette fonction du noyau réduit l\'utilisation de la mémoire physique et améliore les performances (Kernel Same-page Merging)</string>
+    <!-- Purgeable Assets -->
+    <string name="pref_purgeable_assets_title">Purge des bitmaps</string>
+    <string name="pref_purgeable_assets_summary">Le système peut libérer plus de RAM si la mémoire des bitmaps peut être réclamée (nécessite un redémarrage)</string>
+    <!-- Performance Settings : Processor Settings -->
+    <string name="processor_title">Paramètres CPU</string>
+    <string name="processor_summary">Stratégie et fréquence</string>
+    <string name="cpu_cur_freq_title">Fréquence actuelle</string>
+    <string name="cpu_governors_title">Stratégie</string>
+    <string name="cpu_governors_summary">%S</string>
+    <string name="cpu_min_freq_title">Fréquence minimale</string>
+    <string name="cpu_min_freq_summary">%s</string>
+    <string name="cpu_max_freq_title">Fréquence maximale</string>
+    <string name="cpu_max_freq_summary">%s</string>
+    <string name="cpu_set_on_boot">Appliquer au démarrage</string>
+    <string name="cpu_set_on_boot_summary">Modifie les fréquences du CPU au démarrage du système</string>
+
+    <!-- About phone -->
+    <string name="mod_version">Version CyanogenMod</string>
+    <string name="mod_version_default">Inconnue</string>
+    <string name="build_date">Date du système</string>
+
+<!-- End of CyanogenMod specific settings -->
+
     <string name="sim_lock_settings" msgid="3392331196873564292">"Paramètres verrouillage SIM"</string>
     <string name="sim_lock_settings_category" msgid="5136244267576697004">"Configurer verrouillage carte SIM"</string>
     <string name="sim_lock_settings_title" msgid="9018585580955414596">"Verrouillage de la SIM"</string>
