@@ -624,10 +624,15 @@
     <string name="volume_media_description">Music, video, games, &amp; other media</string>
     <!-- Volume description for ringtone and notification volume -->
     <string name="volume_ring_description">Ringtone &amp; notifications</string>
+    <!-- Volume description for ringtone volume -->
+    <string name="volume_ring_only_description">Ringtones</string>
     <!-- Volume description for notification volume -->
     <string name="volume_notification_description">Notifications</string>
     <!-- Volume description for alarm volume -->
     <string name="volume_alarm_description">Alarms</string>
+    <string name="link_volume_ringtones">Link volumes</string>
+    <string name="link_volume_ringtones_toast">Make sure to change your volume to re-set your notification volume to match your ringtone volume.</string>
+    <string name="link_volume_mutes">Link mute states</string>
 
     <!-- Display settings --><skip/>
     <!-- Sound & display settings screen, section header for settings related to display -->
@@ -761,13 +766,13 @@
     <string name="title_widget_order">Widget button order</string>
     <string name="summary_widget_order">Select the order of the buttons in the power widget</string>
     <string name="title_buttons">Buttons</string>
-    <string name="title_toggle_wifi">Toggle Wifi</string>
+    <string name="title_toggle_wifi">Toggle Wi-Fi</string>
     <string name="title_toggle_bluetooth">Toggle Bluetooth</string>
     <string name="title_toggle_gps">Toggle GPS</string>
     <string name="title_toggle_sound">Toggle Sound</string>
     <string name="title_toggle_brightness">Toggle Brightness</string>
     <string name="title_toggle_sync">Toggle Sync</string>
-    <string name="title_toggle_wifiap">Toggle Wifi AP</string>
+    <string name="title_toggle_wifiap">Toggle Wi-Fi AP</string>
     <string name="title_toggle_screentimeout">Toggle Screentimeout</string>
     <string name="title_toggle_mobiledata">Toggle Mobiledata</string>
     <string name="title_toggle_lockscreen">Toggle Lockscreen</string>
@@ -1438,6 +1443,17 @@
     <string name="system_update_settings_list_item_title">System updates</string>
     <!-- About device screen, list item summary. Takes the user to the screen for seeing and installing system updates. -->
     <string name="system_update_settings_list_item_summary">""</string>
+
+    <!-- Display : Rotation #CM -->
+    <string name="display_rotation_title">Rotation</string>
+    <string name="display_rotation_enabled">Enabled.</string>
+    <string name="display_rotation_disabled">Disabled.</string>
+    <string name="display_rotation_unit">degrees</string>
+    <string name="display_rotation_category_title">Rotation modes</string>
+    <string name="display_rotation_0_title">0 degrees</string>
+    <string name="display_rotation_90_title">90 degrees</string>
+    <string name="display_rotation_180_title">180 degrees</string>
+    <string name="display_rotation_270_title">270 degrees</string>
 
     <!-- About device screen, model of device. -->
     <string name="model_number">Model number</string>
@@ -2961,9 +2977,9 @@ found in the list of installed apps.</string>
     <string name="enable_adb_summary">Allow Android debug mode, the adb interface on USB (or on network)</string>
     <!-- Setting checkbox title for Whether debugging should run over TCP/IP. -->
     <string name="adb_over_network">ADB over network</string>
-    <string name="adb_over_network_summary">Enable TCP/IP debugging over Network interfaces (Wi-Fi, Usb net). This setting is reset on reboot</string>
+    <string name="adb_over_network_summary">Enable TCP/IP debugging over network interfaces (Wi-Fi, USB networks). This setting is reset on reboot</string>
     <!-- Warning for Adb over Network -->
-    <string name="adb_over_network_warning">WARNING: When ADB over Network is enabled, your phone is open for intrusions on all connected networks, including GSM data network !\n\nOnly use this feature when you are connected on trusted networks.\n\nDo you really want to enable this function ?</string>
+    <string name="adb_over_network_warning">WARNING: When ADB over network is enabled, your phone is open for intrusions on all connected networks, including GSM data network !\n\nOnly use this feature when you are connected on trusted networks.\n\nDo you really want to enable this function?</string>
     <!-- Setting checkbox title for displaying USB debugging notification -->
     <string name="adb_notify">USB debugging notify</string>
     <!-- Setting checkbox summary for displaying USB debugging notification -->
@@ -3766,7 +3782,7 @@ found in the list of installed apps.</string>
     <string name="show_all_anrs_summary">Show App Not Responding dialog
         for background apps</string>
 
-     <!-- UI debug setting: kill app long-press back [CHAR LIMIT=25] -->
+    <!-- UI debug setting: kill app long-press back [CHAR LIMIT=25] -->
     <string name="kill_app_longpress_back">Kill app back button</string>
     <!-- UI debug settting: kill app long-press back [CHAR LIMIT=50] -->
     <string name="kill_app_longpress_back_summary">Kill the foreground app by long-pressing
@@ -4039,10 +4055,6 @@ found in the list of installed apps.</string>
     <string name="cmlauncher_settings_title">Trebuchet</string>
     <!-- CPU Settings -->
     <string name="cpu_settings_title">Cpu Settings</string>
-    <!--Ability to separate rintone and notification volumes -->
-    <string name="link_volume_ringtones">Link volumes</string>
-    <!-- Volume description for ringtone volume -->
-    <string name="volume_ring_only_description">Ringtones</string>
 
     <!-- Wakeup options -->
     <string name="display_category_wakeup_options_title">Wakeup options</string>
