@@ -36,6 +36,7 @@ public class SystemSettings extends SettingsPreferenceFragment implements
 
     private static final String KEY_FONT_SIZE = "font_size";
     private static final String KEY_COMBINED_BAR = "combined_bar";
+    private static final String KEY_NAVIGATION_BAR = "navigation_bar";
 
     private ListPreference mFontSizePref;
 
@@ -51,6 +52,10 @@ public class SystemSettings extends SettingsPreferenceFragment implements
         mFontSizePref.setOnPreferenceChangeListener(this);
         if (!Utils.isScreenLarge()) {
             getPreferenceScreen().removePreference(findPreference(KEY_COMBINED_BAR));
+        }
+        if (Utils.isScreenLarge() || !getResources().getBoolean(
+                com.android.internal.R.bool.config_showNavigationBar)) {
+            getPreferenceScreen().removePreference(findPreference(KEY_NAVIGATION_BAR));
         }
     }
 
