@@ -17,9 +17,16 @@
 package com.android.settings.cyanogenmod;
 
 import android.os.Bundle;
+import android.content.Context;
+import android.os.RemoteException;
+import android.os.ServiceManager;
+import android.view.IWindowManager;
+import android.preference.PreferenceScreen;
+import android.provider.Settings;
 
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
+import com.android.settings.Utils;
 
 public class SystemSettings extends SettingsPreferenceFragment {
     private static final String TAG = "SystemSettings";
