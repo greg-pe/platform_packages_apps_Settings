@@ -61,6 +61,9 @@
     <string name="wifi_enable_watchdog_service">Avoid poor connections</string>
     <!-- Checkbox summary for option to toggle wifi watchdog service -->
     <string name="wifi_enable_watchdog_service_summary">Don\'t use a Wi-Fi network unless it has a good Internet connection</string>
+    <string name="sleep_wifi_speed">High speed while Sleep mode</string>
+    <!-- Checkbox summary for option to toggle wifi watchdog service -->
+    <string name="sleep_wifi_speed_summary">Maintains Wi-Fi speed while sleeping time but reduces the batery time</string>
     <!-- Setting title for setting the wifi sleep policy. Do we keep Wi-Fi active when the screen turns off? -->
     <string name="wifi_setting_sleep_policy_title">Keep Wi-Fi on during sleep</string>
     <!-- Generic error message when the sleep policy could not be set. -->
