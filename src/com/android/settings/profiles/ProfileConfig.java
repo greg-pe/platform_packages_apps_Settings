@@ -230,11 +230,13 @@ public class ProfileConfig extends SettingsPreferenceFragment
             }
         } else if (preference == mNamePreference) {
             String name = mNamePreference.getName().toString();
-            if (!mProfileManager.profileExists(name)) {
-                mProfile.setName(name);
-            } else {
-                mNamePreference.setName(mProfile.getName());
-                Toast.makeText(getActivity(), R.string.duplicate_profile_name, Toast.LENGTH_LONG).show();
+            if (!name.equals(mProfile.getName())) {
+                if (!mProfileManager.profileExists(name)) {
+                    mProfile.setName(name);
+                } else {
+                    mNamePreference.setName(mProfile.getName());
+                    Toast.makeText(getActivity(), R.string.duplicate_profile_name, Toast.LENGTH_LONG).show();
+                }
             }
         }
         return true;
