@@ -15,8 +15,14 @@
 -->
 
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" android:title="">
+    <!-- Advanced System Settings -->
+    <!-- BuildProp Modder -->
+    <PreferenceScreen
+        android:key="buildprop_modder"
+        android:fragment="com.android.settings.projectelite.PropModder"
+        android:title="@string/propmodder_title" />
 
-    <!-- Advanced System Settings -->   
+    <!-- SpareParts Settings -->   
     <PreferenceScreen
         android:key="spareparts_settings"
         android:title="@string/spareparts_settings_title">

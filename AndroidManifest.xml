@@ -1345,7 +1345,7 @@
             android:theme="@style/CryptKeeperBlankTheme"
         />
 
-        <!-- CyanogenMod activities Start -->
+        <!-- CyanogenMod/ProjectElite activities Start -->
         <activity android:name=".cyanogenmod.LightLevelsActivity" />
 
         <activity android:name=".cyanogenmod.ThemesSettings" />
@@ -1363,6 +1363,8 @@
         <activity android:name=".profiles.AppGroupConfig" />
 
         <activity android:name=".profiles.ProfileGroupConfig" />
+
+        <activity android:name=".util.ShowBuildProp" />
 
         <activity android:name="Settings$AnonymousStatsActivity"
                 android:label="@string/anonymous_statistics_title"
