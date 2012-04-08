@@ -1401,6 +1401,14 @@
                 android:resource="@id/wireless_settings" />
         </activity>
 
+        <activity 
+                android:label="@string/advanced_system_settings_title"
+                android:name=".projectelite.AdvancedSettings">
+            <intent-filter >
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+
         <receiver android:name=".widget.SettingsAppWidgetProvider"
                 android:label="@string/gadget_title"
                 android:exported="false"

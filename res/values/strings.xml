@@ -4185,5 +4185,8 @@ found in the list of installed apps.</string>
     <string name="pref_volume_wake_title">Volume rocker wake</string>
     <string name="pref_volume_wake_summary">Pressing the volume up/down wakes the device. Intended for devices with hard to press power key</string>
 
+    <!-- Advanced System Settings -->
+    <string name="advanced_system_settings_title">Advanced system settings</string>
+    <string name="spareparts_settings_title">Spare Parts settings</string>
 </resources>
 
