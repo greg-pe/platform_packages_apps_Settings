@@ -1725,9 +1725,6 @@
     <!-- Lock screen #CM -->
     <string name="lock_screen_title">Bildschirmsperre</string>
 
-    <!-- Profiles settings #CM -->
-    <string name="profiles_settings_title">Profile</string>
-
     <!-- Screen security - Screen security  #CM -->
     <string name="screen_security_category">Bildschirm-Sicherheit</string>
     <string name="screen_security_title">Sicherheitssperre</string>
@@ -1736,7 +1733,7 @@
     <string name="unlock_menu_unlock_title">Mit Menü entsperren</string>
     <string name="unlock_menu_unlock_summary">Entsperren des Gerätes durch Drücken der Menütaste</string>
     <string name="unlock_quick_unlock_control_title">Schnelles Entsperren</string>
-    <string name="unlock_quick_unlock_control_summary">PIN oder Passwort ohne Bestätigung eingeben. Löschen gilt als Fehlversuch.</string>
+    <string name="unlock_quick_unlock_control_summary">Entsperrt, sobald PIN oder Passwort korrekt eingegeben wurden.</string>
 
     <!-- Performance settings #CM -->
     <string name="performance_settings_title">Leistung</string>
@@ -1775,6 +1772,9 @@
     <!-- VM Heap Size -->
     <string name="pref_heapsize_title">Größe VM-Heap</string>
     <string name="pref_heapsize_summary">Maximale Speichernutzung pro VM-Heap (Neustart erforderlich)</string>
+    <!-- KSM -->
+    <string name="pref_ksm_title">Kernel Samepage Merging</string>
+    <string name="pref_ksm_summary">KSM verringert den Speicherbedarf und erhöht die Leistung.</string>
     <!-- Purgeable Assets -->
     <string name="pref_purgeable_assets_title">Freigabe von Ressourcen</string>
     <string name="pref_purgeable_assets_summary">Erlaubt dem System, Speicherbereiche von nicht mehr benutzen Bildern freizugeben, um mehr RAM bereitzustellen (Neustart erforderlich)</string>
@@ -1784,8 +1784,6 @@
     <!-- Performance Settings : 16bpp Alpha -->
     <string name="pref_use_16bpp_alpha_title">16-bit-Transparenz</string>
     <string name="pref_use_16bpp_alpha_summary">Verwenden der 16-bit-Transparenz kann die Performance beim Scrollen verbessern, aber Grafikfehler verursachen (Neustart erforderlich)</string>
-
-    <!-- System Updates #CM -->
 
     <!-- Donate #CM -->
     <!-- About device screen, list item title. Takes the user to the screen about how to donate to the CyanogenMod Project. -->
