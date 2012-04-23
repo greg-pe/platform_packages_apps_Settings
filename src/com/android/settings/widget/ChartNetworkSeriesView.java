@@ -71,7 +71,7 @@ public class ChartNetworkSeriesView extends View {
     private boolean mEstimateVisible = false;
 
     private long mMax;
-    private long mMaxEstimate;
+    public static long mMaxEstimate;
 
     public ChartNetworkSeriesView(Context context) {
         this(context, null, 0);

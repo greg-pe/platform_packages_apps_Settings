@@ -127,6 +127,7 @@ import com.android.settings.net.UidDetail;
 import com.android.settings.net.UidDetailProvider;
 import com.android.settings.widget.ChartDataUsageView;
 import com.android.settings.widget.ChartDataUsageView.DataUsageChartListener;
+import com.android.settings.widget.ChartNetworkSeriesView;
 import com.android.settings.widget.PieChartView;
 import com.google.android.collect.Lists;
 
@@ -183,6 +184,7 @@ public class DataUsageSummary extends Fragment {
     private static final String PREF_FILE = "data_usage";
     private static final String PREF_SHOW_WIFI = "show_wifi";
     private static final String PREF_SHOW_ETHERNET = "show_ethernet";
+    private static final String PREF_LINEAR_CHART = "linear_chart";
 
     private SharedPreferences mPrefs;
 
@@ -226,6 +228,7 @@ public class DataUsageSummary extends Fragment {
 
     private boolean mShowWifi = false;
     private boolean mShowEthernet = false;
+    public static boolean mLinearChart = false;
 
     private NetworkTemplate mTemplate;
     private ChartData mChartData;
@@ -267,6 +270,7 @@ public class DataUsageSummary extends Fragment {
 
         mShowWifi = mPrefs.getBoolean(PREF_SHOW_WIFI, false);
         mShowEthernet = mPrefs.getBoolean(PREF_SHOW_ETHERNET, false);
+        mLinearChart = mPrefs.getBoolean(PREF_LINEAR_CHART, false);
 
         setHasOptionsMenu(true);
     }
@@ -456,6 +460,10 @@ public class DataUsageSummary extends Fragment {
             showEthernet.setVisible(false);
             mShowEthernet = true;
         }
+
+        final MenuItem LinearChart = menu.findItem(R.id.data_usage_menu_linear_chart);
+        LinearChart.setVisible(true);
+        LinearChart.setChecked(mLinearChart);
     }
 
     @Override
@@ -504,6 +512,14 @@ public class DataUsageSummary extends Fragment {
                 mPrefs.edit().putBoolean(PREF_SHOW_ETHERNET, mShowEthernet).apply();
                 item.setChecked(mShowEthernet);
                 updateTabs();
+                return true;
+            }
+            case R.id.data_usage_menu_linear_chart: {
+                mLinearChart = !item.isChecked();
+                mPrefs.edit().putBoolean(PREF_LINEAR_CHART, mLinearChart).apply();
+                item.setChecked(mLinearChart);
+                mChart.mVertMax = 0;
+                updateBody();
                 return true;
             }
         }
@@ -619,7 +635,8 @@ public class DataUsageSummary extends Fragment {
     private OnTabChangeListener mTabListener = new OnTabChangeListener() {
         /** {@inheritDoc} */
         public void onTabChanged(String tabId) {
-            // user changed tab; update body
+            // user changed tab; clear estimated data and update body
+            ChartNetworkSeriesView.mMaxEstimate = 0;
             updateBody();
         }
     };
