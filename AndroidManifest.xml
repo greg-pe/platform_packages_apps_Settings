@@ -1366,6 +1366,8 @@
 
         <activity android:name=".util.ShowBuildProp" />
 
+        <activity android:name=".cyanogenmod.LockscreenTargets" />
+
         <activity android:name=".notificationlight.NotificationLightSettings" />
 
         <activity android:name="Settings$AnonymousStatsActivity"
