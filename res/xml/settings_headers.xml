@@ -67,10 +67,16 @@
         android:icon="@drawable/ic_settings_cmlauncher">
         <intent
             android:action="android.intent.action.MAIN"
-            android:targetPackage="com.cyanogenmod.trebuchet"
+            android:targetPackage="com.cy  anogenmod.trebuchet"
             android:targetClass="com.cyanogenmod.trebuchet.preference.Preferences" />
     </header>
- 
+    <!-- Themes -->
+    <header
+        android:id="@+id/themes_settings"
+        android:icon="@drawable/ic_settings_themes"
+        android:fragment="com.android.settings.cyanogenmod.ThemesSettings"
+        android:title="@string/themes_settings_title" />
+
     <!-- System -->
     <header
         android:id="@+id/system_settings"
