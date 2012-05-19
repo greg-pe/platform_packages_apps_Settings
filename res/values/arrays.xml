@@ -1117,6 +1117,20 @@
         <item>2500</item>
         <item>5000</item>
     </string-array>
+
+    <!-- Values for the navigation bar glow animation -->
+    <string-array name="entries_nav_bar_glow_time">
+        <item>@string/navigation_bar_glow_off</item>
+        <item>@string/navigation_bar_glow_quick</item>
+        <item>@string/navigation_bar_glow_normal</item>
+    </string-array>
+
+    <string-array name="values_nav_bar_glow_time" translatable="false">
+        <item>0|0</item>
+        <item>250|25</item>
+        <item>500|50</item>
+    </string-array>
+
     <!-- **** CYANOGENMOD EDITS END **** -->    
 
     <string-array name="entries_wifi_scan" translatable="false">
@@ -1359,4 +1373,5 @@
         <item>3</item>
         <item>4</item>
     </string-array>
+
 </resources>
