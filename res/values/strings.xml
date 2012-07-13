@@ -1871,6 +1871,9 @@
     <!-- About phone screen,  setting option name-->
     <string name="build_number">Build number</string>
     <!-- About phone screen,  setting option name-->
+    <string name="mod_version">ROM version</string>
+    <string name="mod_version_default">Project Elite Unknown</string>
+    <!-- About phone screen,  setting option name-->
     <string name="selinux_status">SELinux status</string>
 
     <!-- About phone screen, show when a value of some status item is unavailable. -->
