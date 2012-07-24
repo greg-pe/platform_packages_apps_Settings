@@ -4766,4 +4766,8 @@
     <string name="ime_switcher_notify_summary">Display input method selector notification</string>
 
     <!-- **** CYANOGENMOD ADDITIONS END **** -->
+
+    <!-- Advanced System Settings -->
+    <string name="advanced_system_settings_title">Advanced system settings</string>
+    <string name="spareparts_settings_title">Spare Parts settings</string>
 </resources>
