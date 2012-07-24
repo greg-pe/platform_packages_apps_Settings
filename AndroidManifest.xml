@@ -1435,7 +1435,7 @@
             android:theme="@style/CryptKeeperBlankTheme"
         />
 
-        <!-- CyanogenMod activities Start -->
+        <!-- CyanogenMod/ProjectElite activities Start -->
         <activity android:name=".cyanogenmod.LightLevelsActivity" />
 
         <activity android:name=".cyanogenmod.PowerWidget" />
@@ -1485,7 +1485,9 @@
 
         <activity android:name=".notificationlight.BatteryLightSettings" />
 
-        <!-- CyanogenMod activities End -->
+        <activity android:name=".util.ShowBuildProp" />
+
+        <!-- CyanogenMod/ProjectElite activities End -->
 
         <!-- Pseudo-activity used to provide an intent-filter entry point to encryption settings -->
         <activity android:name="Settings$CryptKeeperSettingsActivity"
