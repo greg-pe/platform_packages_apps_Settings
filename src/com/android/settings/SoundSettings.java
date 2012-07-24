@@ -316,7 +316,7 @@ public class SoundSettings extends SettingsPreferenceFragment implements
 
     private String getVolumeOverlaySettingValue() {
         // Load from Settings
-        int settingAsInt = Settings.System.getInt(getContentResolver(),Settings.System.MODE_VOLUME_OVERLAY, Settings.System.VOLUME_OVERLAY_SINGLE);
+        int settingAsInt = Settings.System.getInt(getContentResolver(),Settings.System.MODE_VOLUME_OVERLAY, Settings.System.VOLUME_OVERLAY_EXPANDABLE);
         if (settingAsInt != -1 && settingAsInt < volumeSubNames.length && volumeSubNames[settingAsInt] != null) {
             mVolumeOverlay.setSummary(volumeSubNames[settingAsInt]);
         }
