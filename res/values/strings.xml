@@ -4258,6 +4258,8 @@
     <string name="navigation_bar_reset_message">Delete current settings and restore to default?</string>
     <string name="navigation_bar_save_message">Navigation bar settings saved</string>
     <string name="navigation_bar_reset_toast">Navigation bar reset to default</string>
+    <string name="navigation_bar_menu_editable">Editable</string>
+    <string name="navigation_bar_menu_locked">Locked</string>
 
     <!-- Power Widget  -->
     <string name="power_widget_title">Power widget</string>
