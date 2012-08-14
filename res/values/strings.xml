@@ -4771,7 +4771,12 @@
     <string name="ime_switcher_notify_summary">Display input method selector notification</string>
 
     <!-- Power menu screenshot -->
-    <string name="power_menu_screenshot_title">Power menu screenshot</string>
+
+    <string name="power_menu_title">Power menu</string>
+    <string name="power_menu_reboot_title">Reboot menu</string>
+    <string name="power_menu_screenshot_title">Screenshot</string>
+    <string name="power_menu_profiles_title">Profile switcher</string>
+
     <!-- **** CYANOGENMOD ADDITIONS END **** -->
 
     <!-- Advanced System Settings -->
