@@ -1333,6 +1333,18 @@
         <item>10000</item>
     </integer-array>
 
+    <!--- Volume key cursor control -->
+    <string-array name="volume_key_cursor_control_entries">
+        <item>@string/volume_key_cursor_control_off</item>
+        <item>@string/volume_key_cursor_control_on</item>
+        <item>@string/volume_key_cursor_control_on_reverse</item>
+    </string-array>
+
+    <string-array name="volume_key_cursor_control_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
     <!-- **** CYANOGENMOD EDITS END **** -->
  
     <!-- ****Prop Modder Edits ***** -->
@@ -1576,6 +1588,6 @@
         <item>3</item>
         <item>4</item>
     </string-array>
-
     <!-- ****Prop Modder Edits End ***** -->
+
 </resources>
