@@ -888,14 +888,6 @@ public class DevelopmentSettings extends PreferenceFragment
                         Settings.Secure.ADB_PORT, -1);
                 updateAdbOverNetwork();
             }
-<<<<<<< HEAD
-=======
-
-        } else if (preference == mAdbNotify) {
-            Settings.Secure.putInt(getActivity().getContentResolver(),
-                    Settings.Secure.ADB_NOTIFY,
-                    mAdbNotify.isChecked() ? 1 : 0);
->>>>>>> 45208cf... DevelopmentSettings: Refactor ADB over Network
         } else if (preference == mKeepScreenOn) {
             Settings.System.putInt(getActivity().getContentResolver(),
                     Settings.System.STAY_ON_WHILE_PLUGGED_IN, 
@@ -1009,17 +1001,6 @@ public class DevelopmentSettings extends PreferenceFragment
                 mLastEnabledState = true;
                 setPrefsEnabledState(mLastEnabledState);
             }
-<<<<<<< HEAD
-=======
-
-        } else if (dialog == mRootDialog) {
-            if (which == DialogInterface.BUTTON_POSITIVE) {
-                writeRootAccessOptions(mSelectedRootValue);
-            } else {
-                // Reset the option
-                writeRootAccessOptions("0");
-            }
->>>>>>> 45208cf... DevelopmentSettings: Refactor ADB over Network
         }
     }
 
