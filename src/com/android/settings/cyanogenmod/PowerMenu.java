@@ -31,10 +31,12 @@ public class PowerMenu extends SettingsPreferenceFragment {
     private static final String KEY_REBOOT = "power_menu_reboot";
     private static final String KEY_SCREENSHOT = "power_menu_screenshot";
     private static final String KEY_PROFILES = "power_menu_profiles";
+    private static final String KEY_AIRPLANEMODE = "power_menu_airplanemode";
 
     private CheckBoxPreference mRebootPref;
     private CheckBoxPreference mScreenshotPref;
     private CheckBoxPreference mProfilesPref;
+    private CheckBoxPreference mAirplaneModePref;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -53,6 +55,10 @@ public class PowerMenu extends SettingsPreferenceFragment {
         mProfilesPref = (CheckBoxPreference) findPreference(KEY_PROFILES);
         mProfilesPref.setChecked((Settings.System.getInt(getContentResolver(),
                 Settings.System.POWER_MENU_PROFILES_ENABLED, 1) == 1));
+
+        mAirplaneModePref = (CheckBoxPreference) findPreference(KEY_AIRPLANEMODE);
+        mAirplaneModePref.setChecked((Settings.System.getInt(getContentResolver(),
+                Settings.System.POWER_MENU_AIRPLANEMODE_ENABLED, 1) == 1));
 
         // Only enable if System Profiles are also enabled
         boolean enabled = Settings.System.getInt(getContentResolver(),
@@ -79,6 +85,11 @@ public class PowerMenu extends SettingsPreferenceFragment {
             value = mProfilesPref.isChecked();
             Settings.System.putInt(getContentResolver(),
                     Settings.System.POWER_MENU_PROFILES_ENABLED,
+                    value ? 1 : 0);
+        } else if (preference == mAirplaneModePref) {
+            value = mAirplaneModePref.isChecked();
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.POWER_MENU_AIRPLANEMODE_ENABLED,
                     value ? 1 : 0);
         } else {
             return super.onPreferenceTreeClick(preferenceScreen, preference);
