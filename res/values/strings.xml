@@ -4261,6 +4261,21 @@
     <string name="navigation_bar_menu_editable">Editable</string>
     <string name="navigation_bar_menu_locked">Locked</string>
 
+    <!-- Navigation Height/Width Settings -->
+    <string name="navbar_header">NavBar Size</string>
+    <string name="navbar_header_summary">Height/Width</string>
+    <string name="navbar_enable_bar">Enable bar</string>
+    <string name="navigation_bar_height_title">Navigation bar height</string>
+    <string name="navigation_bar_height_summary">Navigation Bar height while in portrait</string>
+    <string name="navigation_bar_height_landscape_title">Navigation bar height landscape</string>
+    <string name="navigation_bar_height_landscape_summary">Navigation Bar height while in landscape</string>
+    <string name="navigation_bar_width_title">Navigation bar width</string>
+    <string name="navigation_bar_width_summary">Navigation Bar height if the bar is along a side</string>
+    <string name="navbar_reboot_title">Reboot</string>
+    <string name="navbar_reboot_message">Please reboot to apply changes</string>
+    <string name="navbar_reboot_yes">Reboot Now</string>
+    <string name="navbar_reboot_no">Reboot Later</string>
+
     <!-- Hardware keys -->
     <string name="hardware_keys_title">Hardware keys</string>
     <string name="hardware_keys_bindings_title">Key actions</string>

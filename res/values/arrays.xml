@@ -1629,4 +1629,59 @@
         <item>4</item>
     </string-array>
 <!-- ****Prop Modder Edits End ***** -->
+
+    <string-array name="navigation_bar_width_entries">
+        <item>54dp</item>
+        <item>48dp</item>
+        <item>42dp (Default)</item>
+        <item>36dp</item>
+        <item>30dp</item>
+        <item>24dp</item>
+    </string-array>
+
+    <string-array name="navigation_bar_width" translatable="false">
+        <item>54</item>
+        <item>48</item>
+        <item>42</item>
+        <item>36</item>
+        <item>30</item>
+        <item>24</item>
+    </string-array>
+
+    <string-array name="navigation_bar_height_entries">
+        <item>54dp</item>
+        <item>48dp (Default)</item>
+        <item>42dp</item>
+        <item>36dp</item>
+        <item>30dp</item>
+        <item>24dp</item>
+    </string-array>
+
+     <string-array name="navigation_bar_height" translatable="false">
+        <item>54</item>
+        <item>48</item>
+        <item>42</item>
+        <item>36</item>
+        <item>30</item>
+        <item>24</item>
+    </string-array>
+
+    <string-array name="navigation_bar_height_landscape_entries">
+        <item>54dp</item>
+        <item>48dp (Default)</item>
+        <item>42dp</item>
+        <item>36dp</item>
+        <item>30dp</item>
+        <item>24dp</item>
+    </string-array>
+
+     <string-array name="navigation_bar_height_landscape" translatable="false">
+        <item>54</item>
+        <item>48</item>
+        <item>42</item>
+        <item>36</item>
+        <item>30</item>
+        <item>24</item>
+    </string-array>
+
 </resources>
