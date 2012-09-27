@@ -4262,7 +4262,7 @@
     <string name="navigation_bar_menu_locked">Locked</string>
 
     <!-- Navigation Height/Width Settings -->
-    <string name="navbar_header">NavBar Size</string>
+    <string name="navbar_header">NavigationBar Size</string>
     <string name="navbar_header_summary">Height/Width</string>
     <string name="navbar_enable_bar">Enable bar</string>
     <string name="navigation_bar_height_title">Navigation bar height</string>
