@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package com.android.settings.ada;
+package com.android.settings.cyanogenmod;
 
 import java.io.File;
 import java.io.FileNotFoundException;
