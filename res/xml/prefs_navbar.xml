@@ -26,4 +26,27 @@
 			android:title="@string/navigation_bar_width_title"
                         android:summary="@string/navigation_bar_width_summary" />
 
+        <com.android.settings.cyanogenmod.SeekBarPreference
+            android:key="button_transparency"
+            android:title="@string/button_transparency_title" />
+    
+        <net.margaritov.preference.colorpicker.ColorPickerPreference
+            android:key="nav_button_color"
+            android:title="@string/navigation_bar_tint_title"
+            android:defaultValue="#FFFFFF" />
+
+        <net.margaritov.preference.colorpicker.ColorPickerPreference
+             android:key="nav_button_glow_color"
+             android:title="@string/navigation_bar_glow_tint_title"
+             android:summary="@string/navigation_bar_glow_tint_summary"
+             android:defaultValue="#FFFFFF" />
+
+		<ListPreference
+             android:entries="@array/glow_times_entries"
+             android:entryValues="@array/glow_times_values"
+             android:key="glow_times"
+             android:title="@string/glow_times_title"
+             android:defaultValue="100|10"
+             android:persistent="false" />
+
 </PreferenceScreen>
