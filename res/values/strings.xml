@@ -4454,6 +4454,15 @@
     <!-- Navigation Bar  -->
     <string name="navigation_bar_title">Navigation Bar</string>
     <string name="navigation_bar_title2">Navigation Bar Buttons</string>
+    <string name="navigation_bar_tint_title">Navigation bar color</string>
+    <string name="navigation_bar_glow_tint_title">Navigation bar glow color</string>
+    <string name="glow_times_superquick">Super quick</string>
+    <string name="glow_times_quick">Quick</string>
+    <string name="glow_times_normal">Normal</string>
+    <string name="navigation_bar_glow_tint_summary">When you press on a button, there is a glow. Use this to change the color of the glow.</string>
+    <string name="glow_times_off">Off</string>
+    <string name="glow_times_title">Button glow animation</string>
+    <string name="button_transparency_title">Nav button transparency</string>
 
     <!-- Navigation Height/Width Settings -->
     <string name="navbar_header">NavigationBar Size</string>
@@ -4908,5 +4917,15 @@
     <string name="icon_picker_system_icons_title">System icons</string>
     <string name="icon_picker_gallery_title">Gallery</string>
     <string name="icon_picker_pack_title">Icon pack</string>
+
+    <!-- Color Picker -->
+    <string name="dialog_color_picker">Color Picker</string>
+    <string name="press_color_to_apply">Press on Color to apply</string>
+    <string name="arrow_right">→</string>
+    <string name="arrow_down">↓</string>
+    <string name="hex">Hex:</string>
+    <string name="hex_hint">#FF000000</string>
+    <string name="set">Set</string>
+    <string name="ics_color">!!!</string>
 
 </resources>
