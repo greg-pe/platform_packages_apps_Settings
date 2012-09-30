@@ -1684,4 +1684,17 @@
         <item>24</item>
     </string-array>
 
+    <string-array name="glow_times_entries">
+	<item>@string/glow_times_off</item>
+	<item>@string/glow_times_fast</item>
+	<item>@string/glow_times_normal</item>
+	<item>@string/glow_times_slow</item>
+	</string-array>
+    <string-array name="glow_times_values" translatable="false">
+	<item>0|0</item>
+	<item>100|10</item>
+	<item>250|25</item>
+	<item>500|50</item>
+    </string-array> 
+
 </resources>
