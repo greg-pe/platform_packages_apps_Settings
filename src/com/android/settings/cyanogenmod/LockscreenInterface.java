@@ -98,7 +98,7 @@ public class LockscreenInterface extends SettingsPreferenceFragment implements
         mVibratePref.setChecked(bVibrate);
         mVibratePref.setOnPreferenceChangeListener(this);
 
-        mIsScreenLarge = Utils.isTablet(getActivity());
+        mIsScreenLarge = Utils.isScreenLarge();
 
         updateCustomBackgroundSummary();
     }
