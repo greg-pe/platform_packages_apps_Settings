@@ -32,4 +32,9 @@
             android:targetClass="com.android.spare_parts.SpareParts" />
     </PreferenceScreen>
 
+    <SwitchPreference
+	    android:key="blockads"
+	    android:title="@string/block_ads_title"
+	    android:summary="@string/block_ads_summary_off" />
+
 </PreferenceScreen>

@@ -4868,9 +4868,13 @@
 
     <!-- **** CYANOGENMOD ADDITIONS END **** -->
 
-    <!-- Advanced System Settings -->
-    <string name="advanced_system_settings_title">Advanced system settings</string>
+    <!-- Advanced User Settings -->
+    <string name="advanced_system_settings_title">Advanced options</string>
     <string name="spareparts_settings_title">Spare Parts settings</string>
+    <string name="block_ads_title">Block Ads</string>
+    <string name="block_ads_summary_on">Most Ad hosts are now blocked</string>
+    <string name="block_ads_summary_off">Most Ad hosts are now visible</string>
+    <string name="general_settings_title">Advanced User Settings</string>
 
     <!-- PropModder -->
     <string name="performance_settings_warning_header">Warning</string>
