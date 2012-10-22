@@ -45,7 +45,7 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
-import 	android.preference.SwitchPreference;
+import android.preference.SwitchPreference;
 import android.preference.PreferenceFragment;
 import android.preference.Preference.OnPreferenceChangeListener;
 import android.preference.Preference.OnPreferenceClickListener;
@@ -56,27 +56,25 @@ import com.android.settings.SettingsPreferenceFragment;
 public class GeneralSettings extends SettingsPreferenceFragment {
 
     private static final String BLOCK_ADS = "blockads";
-
-        private SwitchPreference mBlockAds;
-
-        String rtnString = new String("");
     private static final String LOG_TAG = "GeneralSettings";
+    private SwitchPreference mBlockAds;
+    String rtnString = new String("");
    
-
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
         addPreferencesFromResource(R.xml.advanced_settings);
 
-    /* Block Ads */
+        /* Block Ads */
         mBlockAds = (SwitchPreference) findPreference(BLOCK_ADS);
 	mBlockAds.setChecked((checkValue(0) == 1) ? true : false);
-}
+    }
+
     @Override
     public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
 	boolean value;
 
-    if (preference == mBlockAds) {
+        if (preference == mBlockAds) {
 		value = mBlockAds.isChecked();
                 if (value) {
                     execCommand("blockads", true);
@@ -84,12 +82,11 @@ public class GeneralSettings extends SettingsPreferenceFragment {
                     execCommand("showads", true);
                 }
 		return true;
-     } 
-
-        
-	return false;
+            } 
+	 return false;
 	}
-public void onSharedPreferenceChanged(SharedPreferences preferences, String key) {}
+
+        public void onSharedPreferenceChanged(SharedPreferences preferences, String key) {}
 
         public int checkValue(final int getValue) {              
             switch (getValue) {
@@ -105,11 +102,10 @@ public void onSharedPreferenceChanged(SharedPreferences preferences, String key)
                         mBlockAds.setSummary(R.string.block_ads_summary_off);
                         return 0;
                     }
-            }
+             }
             return 0;
         }
        
-
         public void execCommand(String strCommand, boolean isShort) {                    
             
 			try {
@@ -142,6 +138,6 @@ public void onSharedPreferenceChanged(SharedPreferences preferences, String key)
                
             } catch (IOException e) {
                 // Ignore Exception
-            }
-        }
+          }
+     }
 }
