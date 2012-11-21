@@ -1488,6 +1488,9 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".notificationlight.NotificationLightSettings" />
+
+        <activity android:name=".notificationlight.BatteryLightSettings" />
 
         <receiver android:name=".widget.SettingsAppWidgetProvider"
                 android:label="@string/gadget_title"
