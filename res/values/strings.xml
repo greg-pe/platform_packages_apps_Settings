@@ -4624,10 +4624,7 @@
     <string name="dithering_color_banding">Fix color banding (default)</string>
     <string name="dithering_blur_effect">Fix color banding and blur effect</string>
 
-    <!-- Performance Settings : 16bpp Alpha -->
-    <string name="pref_use_16bpp_alpha_title">16bit transparency</string>
-    <string name="pref_use_16bpp_alpha_summary">Better graphics performance, but lower quality and may cause visual artifacts (requires reboot)</string>
-
+    <!-- Additnal Sound Settings -->
     <string name="increasing_ring_title">Ascending ringtone</string>
     <!-- Sound settings screen, the caption of the checkbox for making incoming calls increase in volume -->
     <string name="checkbox_increasing_ring">Enable</string>

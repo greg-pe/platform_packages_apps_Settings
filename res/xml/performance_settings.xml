@@ -37,11 +37,6 @@
         android:title="@string/memory_management_title"
         android:summary="@string/memory_management_summary" />
 
-    <CheckBoxPreference
-        android:key="pref_use_16bpp_alpha"
-        android:title="@string/pref_use_16bpp_alpha_title"
-        android:summary="@string/pref_use_16bpp_alpha_summary" />
-
     <ListPreference
         android:key="pref_use_dithering"
         android:persistent="false"

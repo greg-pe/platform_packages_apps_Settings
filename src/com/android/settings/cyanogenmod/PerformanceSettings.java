@@ -41,13 +41,7 @@ public class PerformanceSettings extends SettingsPreferenceFragment
 
     private static final String USE_DITHERING_DEFAULT = "1";
 
-    private static final String USE_16BPP_ALPHA_PREF = "pref_use_16bpp_alpha";
-
-    private static final String USE_16BPP_ALPHA_PROP = "persist.sys.use_16bpp_alpha";
-
     private ListPreference mUseDitheringPref;
-
-    private CheckBoxPreference mUse16bppAlphaPref;
 
     private AlertDialog alertDialog;
 
@@ -67,10 +61,6 @@ public class PerformanceSettings extends SettingsPreferenceFragment
             mUseDitheringPref.setValue(useDithering);
             mUseDitheringPref.setSummary(mUseDitheringPref.getEntry());
 
-            mUse16bppAlphaPref = (CheckBoxPreference) prefSet.findPreference(USE_16BPP_ALPHA_PREF);
-            String use16bppAlpha = SystemProperties.get(USE_16BPP_ALPHA_PROP, "0");
-            mUse16bppAlphaPref.setChecked("1".equals(use16bppAlpha));
-
             /* Display the warning dialog */
             alertDialog = new AlertDialog.Builder(getActivity()).create();
             alertDialog.setTitle(R.string.performance_settings_warning_title);
@@ -85,19 +75,6 @@ public class PerformanceSettings extends SettingsPreferenceFragment
 
             alertDialog.show();
         }
-    }
-
-    @Override
-    public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
-        if (preference == mUse16bppAlphaPref) {
-            SystemProperties.set(USE_16BPP_ALPHA_PROP,
-                    mUse16bppAlphaPref.isChecked() ? "1" : "0");
-        } else {
-            // If we didn't handle it, let preferences handle it.
-            return super.onPreferenceTreeClick(preferenceScreen, preference);
-        }
-
-        return true;
     }
 
     public boolean onPreferenceChange(Preference preference, Object newValue) {
