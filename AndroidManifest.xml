@@ -1435,7 +1435,7 @@
             android:theme="@style/CryptKeeperBlankTheme"
         />
 
-        <!-- CyanogenMod and Project Elite activities Start -->
+        <!-- CyanogenMod/Project Elite activities Start -->
         <activity android:name=".cyanogenmod.PowerWidget" />
 
         <activity android:name=".cyanogenmod.SystemSettings" />
@@ -1479,7 +1479,15 @@
                 android:value="com.android.settings.cmstats.AnonymousStats" />
         </activity>
 
-        <!-- CyanogenMod activities End -->
+        <activity
+                android:label="@string/advanced_system_settings_title"
+                android:name=".projectelite.AdvancedSettings">
+            <intent-filter >
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+
+        <!-- CyanogenMod/ProjectElite activities End -->
 
         <!-- Pseudo-activity used to provide an intent-filter entry point to encryption settings -->
         <activity android:name="Settings$CryptKeeperSettingsActivity"

@@ -4775,4 +4775,7 @@
 
 
     <!-- **** CYANOGENMOD ADDITIONS END **** -->
+
+    <string name="advanced_system_settings_title">Advanced options</string>
+    <string name="spareparts_settings_title">Spare Parts settings</string>
 </resources>

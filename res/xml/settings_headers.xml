@@ -223,6 +223,13 @@
         android:icon="@drawable/ic_settings_performance"
         android:title="@string/performance_settings_title" />
 
+    <!-- Advanced System Settings -->
+    <header
+        android:id="@+id/advanced_system"
+        android:fragment="com.android.settings.projectelite.AdvancedSettings"
+        android:icon="@drawable/ic_settings_pe_advanced"
+        android:title="@string/advanced_system_settings_title" />
+
     <!-- About Device -->
     <header
         android:id="@+id/about_settings"
