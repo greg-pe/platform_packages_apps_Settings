@@ -17,6 +17,8 @@
 package com.android.settings.cyanogenmod;
 
 import android.os.Bundle;
+import android.os.UserHandle;
+import android.os.UserManager;
 import android.preference.CheckBoxPreference;
 import android.preference.Preference;
 import android.preference.PreferenceScreen;
@@ -32,12 +34,14 @@ public class PowerMenu extends SettingsPreferenceFragment {
     private static final String KEY_SCREENSHOT = "power_menu_screenshot";
     private static final String KEY_PROFILES = "power_menu_profiles";
     private static final String KEY_AIRPLANE = "power_menu_airplane";
+    private static final String KEY_USER = "power_menu_user";
     private static final String KEY_SILENT = "power_menu_silent";
 
     private CheckBoxPreference mRebootPref;
     private CheckBoxPreference mScreenshotPref;
     private CheckBoxPreference mProfilesPref;
     private CheckBoxPreference mAirplanePref;
+    private CheckBoxPreference mUserPref;
     private CheckBoxPreference mSilentPref;
 
     @Override
@@ -66,6 +70,15 @@ public class PowerMenu extends SettingsPreferenceFragment {
         mAirplanePref = (CheckBoxPreference) findPreference(KEY_AIRPLANE);
         mAirplanePref.setChecked((Settings.System.getInt(getContentResolver(),
                 Settings.System.POWER_MENU_AIRPLANE_ENABLED, 1) == 1));
+
+        mUserPref = (CheckBoxPreference) findPreference(KEY_USER);
+        if (!UserHandle.MU_ENABLED
+            || !UserManager.supportsMultipleUsers()) {
+            getPreferenceScreen().removePreference(mUserPref);
+        } else {
+            mUserPref.setChecked((Settings.System.getInt(getContentResolver(),
+                    Settings.System.POWER_MENU_USER_ENABLED, 0) == 1));
+        }
 
         mSilentPref = (CheckBoxPreference) findPreference(KEY_SILENT);
         mSilentPref.setChecked((Settings.System.getInt(getContentResolver(),
@@ -96,6 +109,11 @@ public class PowerMenu extends SettingsPreferenceFragment {
             value = mAirplanePref.isChecked();
             Settings.System.putInt(getContentResolver(),
                     Settings.System.POWER_MENU_AIRPLANE_ENABLED,
+                    value ? 1 : 0);
+       } else if (preference == mUserPref) {
+            value = mUserPref.isChecked();
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.POWER_MENU_USER_ENABLED,
                     value ? 1 : 0);
        } else if (preference == mSilentPref) {
             value = mSilentPref.isChecked();
