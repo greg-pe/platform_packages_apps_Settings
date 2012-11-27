@@ -1436,7 +1436,6 @@
         />
 
         <!-- CyanogenMod/Project Elite activities Start -->
-        <activity android:name=".cyanogenmod.PowerWidget" />
 
         <activity android:name=".cyanogenmod.SystemSettings" />
 
