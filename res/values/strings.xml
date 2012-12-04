@@ -4815,4 +4815,7 @@
     <string name="advanced_system_settings_title">Advanced options</string>
     <string name="spareparts_settings_title">Spare Parts settings</string>
     <string name="qs_title">Quick Settings Control</string>
+
+    <string name="notification_convert_sound_to_vibration_title">Notification conversion</string>
+    <string name="notification_convert_sound_to_vibration_summary">Sounds to vibrations during vibrate mode</string>
 </resources>
