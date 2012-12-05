@@ -1506,6 +1506,16 @@
                 android:resource="@id/security_settings" />
         </activity>
 
+        <activity
+            android:name=".projectelite.StatusBarToggles"
+            android:label="@string/title_statusbar_toggles" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.android.settings.SHORTCUT" />
+            </intent-filter>
+        </activity>
+
         <activity android:name="Settings$DataUsageSummaryActivity"
                 android:label="@string/data_usage_summary_title"
                 android:uiOptions="none"

@@ -30,12 +30,8 @@
         android:fragment="com.android.settings.cyanogenmod.PowerMenu" />
 
     <PreferenceScreen
-        android:key="quick_settings"
-        android:title="@string/qs_title">
-        <intent
-            android:action="android.intent.action.MAIN"
-            android:targetPackage="com.TwinBlade.quicksettingscontrolpanel"
-            android:targetClass="com.TwinBlade.quicksettingscontrolpanel.Main" />
-    </PreferenceScreen>
+        android:id="@+id/statusbar_toggles"
+        android:title="@string/qs_title"
+        android:fragment="com.android.settings.projectelite.StatusBarToggles" />
 
 </PreferenceScreen>
