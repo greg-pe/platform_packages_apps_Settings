@@ -1076,7 +1076,6 @@
         <item>BATTERY</item>
         <item>AIRPLANE_MODE</item>
         <item>BLUETOOTH</item>
-        <item>SWAGGER</item>
         <item>VIBRATE</item>
         <item>SILENT</item>
         <item>SYNC</item>
@@ -1101,7 +1100,6 @@
         <item>@string/toggle_battery</item>
         <item>@string/toggle_airplane_mode</item>
         <item>@string/toggle_bluetooth</item>
-        <item>@string/toggle_swagger</item>
         <item>@string/toggle_vibrate</item>
         <item>@string/toggle_silent</item>
         <item>@string/toggle_sync</item>
