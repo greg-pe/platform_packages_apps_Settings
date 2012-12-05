@@ -1,5 +1,5 @@
 
-package com.Settings.projectelite;
+package com.android.settings.projectelite;
 
 import android.app.AlertDialog;
 import android.app.FragmentTransaction;
