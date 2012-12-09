@@ -4853,5 +4853,8 @@
     <string name="toggles_display_dialog">Choose which toggles to use</string>
     <string name="toggles_display_close">Close</string>
     <string name="toggle_default_entries">USER|BRIGHTNESS|SETTINGS|WIFI|SIGNAL|ROTATE|BATTERY|AIRPLANE_MODE|BLUETOOTH</string>
+    <string name="toggle_favorite_contact">Favorite Contact</string>
+    <string name="toggle_favcontact_summary">Choose your favorite contact</string>
+    <string name="toggle_favcontact_title">Favorite contact</string>
 
 </resources>
