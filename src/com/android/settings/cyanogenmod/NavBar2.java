@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package com.android.settings.ada;
+package com.android.settings.cyanogenmod;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -164,7 +164,7 @@ public class NavBar2 extends SettingsPreferenceFragment implements
             int width = mapChosenDpToPixels(dp);
             Settings.System.putInt(getContentResolver(), Settings.System.NAVIGATION_BAR_WIDTH,
                     width);
-            createRebootDialog().show();
+//          createRebootDialog().show();
             toggleBar();
             return true;
         } else if (preference == mNavigationBarHeight) {
@@ -173,7 +173,7 @@ public class NavBar2 extends SettingsPreferenceFragment implements
             int height = mapChosenDpToPixels(dp);
             Settings.System.putInt(getContentResolver(), Settings.System.NAVIGATION_BAR_HEIGHT,
                     height);
-            createRebootDialog().show();
+//          createRebootDialog().show();
             toggleBar();
             return true;
         } else if (preference == mNavigationBarHeightLandscape) {
@@ -182,7 +182,7 @@ public class NavBar2 extends SettingsPreferenceFragment implements
             int height = mapChosenDpToPixels(dp);
             Settings.System.putInt(getContentResolver(), Settings.System.NAVIGATION_BAR_HEIGHT_LANDSCAPE,
                     height);
-            createRebootDialog().show();
+//          createRebootDialog().show();
             toggleBar();
             return true;
         } else if (preference == mNavigationBarColor) {
@@ -248,13 +248,13 @@ public class NavBar2 extends SettingsPreferenceFragment implements
             resId = R.string.glow_times_off;
             mGlowTimes.setValueIndex(0);
         } else if (glowArray[1].equals(combinedTime)) {
-            resId = R.string.glow_times_superquick;
+            resId = R.string.glow_times_fast;
             mGlowTimes.setValueIndex(1);
         } else if (glowArray[2].equals(combinedTime)) {
-            resId = R.string.glow_times_quick;
+            resId = R.string.glow_times_normal;
             mGlowTimes.setValueIndex(2);
         } else {
-            resId = R.string.glow_times_normal;
+            resId = R.string.glow_times_slow;
             mGlowTimes.setValueIndex(3);
         }
         mGlowTimes.setSummary(getResources().getString(resId));

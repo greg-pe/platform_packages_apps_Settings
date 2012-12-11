@@ -4456,9 +4456,9 @@
     <string name="navigation_bar_title2">Navigation Bar Buttons</string>
     <string name="navigation_bar_tint_title">Navigation bar color</string>
     <string name="navigation_bar_glow_tint_title">Navigation bar glow color</string>
-    <string name="glow_times_superquick">Super quick</string>
-    <string name="glow_times_quick">Quick</string>
+    <string name="glow_times_fast">Fast</string>
     <string name="glow_times_normal">Normal</string>
+    <string name="glow_times_slow">Slow</string>
     <string name="navigation_bar_glow_tint_summary">When you press on a button, there is a glow. Use this to change the color of the glow.</string>
     <string name="glow_times_off">Off</string>
     <string name="glow_times_title">Button glow animation</string>
