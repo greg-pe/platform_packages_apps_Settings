@@ -4452,7 +4452,7 @@
     <string name="lock_screen_title">Lock screen</string>
 
     <!-- Navigation Bar  -->
-    <string name="navigation_bar_title">Navigation Bar</string>
+    <string name="navigation_bar_title">Navigation Bar Effects</string>
     <string name="navigation_bar_title2">Navigation Bar Buttons</string>
     <string name="navigation_bar_tint_title">Navigation bar color</string>
     <string name="navigation_bar_glow_tint_title">Navigation bar glow color</string>
@@ -4462,10 +4462,10 @@
     <string name="navigation_bar_glow_tint_summary">When you press on a button, there is a glow. Use this to change the color of the glow.</string>
     <string name="glow_times_off">Off</string>
     <string name="glow_times_title">Button glow animation</string>
-    <string name="button_transparency_title">Nav button transparency</string>
+    <string name="button_transparency_title">Button transparency</string>
 
     <!-- Navigation Height/Width Settings -->
-    <string name="navbar_header">NavigationBar Size</string>
+    <string name="navbar_header">NavigationBar</string>
     <string name="navbar_header_summary">Height/Width</string>
     <string name="navbar_enable_bar">Enable bar</string>
     <string name="navigation_bar_height_title">Navigation bar height</string>
