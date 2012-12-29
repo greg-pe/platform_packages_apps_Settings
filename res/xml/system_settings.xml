@@ -39,4 +39,11 @@
 	android:fragment="com.android.settings.projectelite.NavBarprefs"
 	android:title="@string/navigation_bar_title" />
 
+    <CheckBoxPreference
+        android:key="power_button_torch"
+        android:title="@string/power_button_torch_title"
+        android:summary="@string/power_button_torch_summary"
+        android:persistent="false"
+        android:defaultValue="false" />
+
 </PreferenceScreen>

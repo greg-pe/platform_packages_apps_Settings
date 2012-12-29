@@ -21,6 +21,8 @@ import android.content.Context;
 import android.os.RemoteException;
 import android.os.ServiceManager;
 import android.view.IWindowManager;
+import android.preference.CheckBoxPreference;
+import android.preference.Preference;
 import android.preference.PreferenceScreen;
 import android.provider.Settings;
 
@@ -31,11 +33,28 @@ import com.android.settings.Utils;
 public class SystemSettings extends SettingsPreferenceFragment {
     private static final String TAG = "SystemSettings";
 
+    private static final String KEY_POWER_BUTTON_TORCH = "power_button_torch";
+
+    private CheckBoxPreference mPowerButtonTorch;
+
+    private boolean torchSupported() {
+        return getResources().getBoolean(R.bool.has_led_flash);
+    }
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         addPreferencesFromResource(R.xml.system_settings);
+
+        mPowerButtonTorch = (CheckBoxPreference) findPreference(KEY_POWER_BUTTON_TORCH);
+        if (torchSupported()) {
+            mPowerButtonTorch.setChecked((Settings.System.getInt(getActivity().
+                    getApplicationContext().getContentResolver(),
+                    Settings.System.POWER_BUTTON_TORCH, 0) == 1));
+        } else {
+            getPreferenceScreen().removePreference(mPowerButtonTorch);
+        }
     }
 
     @Override
@@ -46,6 +65,18 @@ public class SystemSettings extends SettingsPreferenceFragment {
     @Override
     public void onPause() {
         super.onPause();
+    }
+
+    @Override
+    public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
+        if (preference == mPowerButtonTorch) {
+            boolean enabled = mPowerButtonTorch.isChecked();
+            Settings.System.putInt(getContentResolver(), Settings.System.POWER_BUTTON_TORCH,
+                    enabled ? 1 : 0);
+            return true;
+        } else {
+            return super.onPreferenceTreeClick(preferenceScreen, preference);
+        }
     }
 
 }

@@ -4843,6 +4843,10 @@
     <string name="status_bar_notif_count_title">Show notification count</string>
     <string name="status_bar_notif_count_summary">Display number of pending notifications</string>
 
+    <!-- Power button torch -->
+    <string name="power_button_torch_title">Power button torch</string>
+    <string name="power_button_torch_summary">Hold power key with screen off to enable torch. Release to disable.</string>
+
     <!-- Wakeup options -->
     <string name="display_category_wakeup_options_title">Wakeup options</string>
     <string name="pref_volume_wake_title">Volume rocker wake</string>
