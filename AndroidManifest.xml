@@ -1494,6 +1494,13 @@
             </intent-filter>
         </activity>
 
+        <receiver
+            android:name=".projectelite.ChangeFastChargeStateReceiver" >
+            <intent-filter>
+                <action android:name="com.android.settings.ACTION_CHANGE_FCHARGE_STATE" />
+            </intent-filter>
+        </receiver>
+
         <!-- CyanogenMod/ProjectElite activities End -->
 
         <!-- Pseudo-activity used to provide an intent-filter entry point to encryption settings -->
