@@ -91,6 +91,8 @@ public class SystemSettings extends SettingsPreferenceFragment {
         } else {
             return super.onPreferenceTreeClick(preferenceScreen, preference);
         }
+    }
+
     private boolean removePreferenceIfPackageNotInstalled(Preference preference) {
         String intentUri=((PreferenceScreen) preference).getIntent().toUri(1);
         Pattern pattern = Pattern.compile("component=([^/]+)/");
