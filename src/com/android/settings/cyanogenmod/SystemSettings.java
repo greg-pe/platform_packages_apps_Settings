@@ -103,7 +103,7 @@ public class SystemSettings extends SettingsPreferenceFragment {
             try {
                 getPackageManager().getPackageInfo(packageName, 0);
             } catch (NameNotFoundException e) {
-                Log.e(TAG, "package " + packageName + " not installed, hiding preference.")
+                Log.e(TAG, "package " + packageName + " not installed, hiding preference.");	
                 getPreferenceScreen().removePreference(preference);
                 return true;
             }
