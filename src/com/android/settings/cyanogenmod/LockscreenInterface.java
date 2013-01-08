@@ -85,6 +85,17 @@ public class LockscreenInterface extends SettingsPreferenceFragment implements
     }
 
     @Override
+    public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
+        if (preference == mLockscreenHideInitialPageHints) {
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.LOCKSCREEN_HIDE_INITIAL_PAGE_HINTS,
+                    ((CheckBoxPreference)preference).isChecked() ? 1 : 0);
+            return true;
+        }
+    return false;
+    }
+
+    @Override
     public boolean onPreferenceChange(Preference preference, Object objValue) {
         ContentResolver cr = getActivity().getContentResolver();
 
@@ -98,11 +109,7 @@ public class LockscreenInterface extends SettingsPreferenceFragment implements
             boolean value = (Boolean) objValue;
             Settings.System.putInt(cr, Settings.System.LOCKSCREEN_MAXIMIZE_WIDGETS, value ? 1 : 0);
             return true;
-        } else if (preference == mLockscreenHideInitialPageHints) {
-            Settings.System.putInt(getActivity().getContentResolver(),
-                    Settings.System.LOCKSCREEN_HIDE_INITIAL_PAGE_HINTS,
-                    ((CheckBoxPreference)preference).isChecked() ? 1 : 0);
-            return true;
+
         }
         return false;
     }
