@@ -65,8 +65,10 @@ public class NavBar extends Fragment {
         mIntent.putExtra("edit", on);
         mIntent.putExtra("save", save);
         mActivity.sendBroadcast(mIntent);
-        mEditMenu.setTitle(on ? R.string.navigation_bar_menu_editable :  R.string.navigation_bar_menu_locked)
-        .setIcon(on ? R.drawable.stat_navbar_edit_on : R.drawable.stat_navbar_edit_off);
+        if (mEditMenu != null) {
+            mEditMenu.setTitle(on ? R.string.navigation_bar_menu_editable :  R.string.navigation_bar_menu_locked)
+            .setIcon(on ? R.drawable.stat_navbar_edit_on : R.drawable.stat_navbar_edit_off);
+        }
     }
 
     @Override
