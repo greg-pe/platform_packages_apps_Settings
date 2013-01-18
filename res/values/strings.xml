@@ -4956,4 +4956,8 @@
     <string name="lockscreen_maximize_widgets_title">Maximize widgets</string>
     <string name="lockscreen_maximize_widgets_summary">Show widgets maximized and the unlock minimized when the screen is turned on</string>
 
+   <!-- MultiPanel Views -->
+   <string name="multipane_ui">Enable/Disable Dual panel</string>
+   <string name="multipane_ui_summary">This will Enable/Disable Dual panel view (Reboot Required!)</string>
+
 </resources>

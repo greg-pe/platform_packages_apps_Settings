@@ -49,4 +49,10 @@
                 android:targetClass="com.cyanogenmod.lockclock.preference.Preferences" />
     </PreferenceScreen>
 
+    <CheckBoxPreference
+	android:key="force_dualpanel"
+	android:title="@string/multipane_ui"
+	android:summary="@string/multipane_ui_summary"
+	android:defaultValue="false" />
+
 </PreferenceScreen>
