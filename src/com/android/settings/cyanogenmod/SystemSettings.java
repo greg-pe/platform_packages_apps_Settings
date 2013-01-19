@@ -43,9 +43,6 @@ import java.util.regex.Pattern;
 public class SystemSettings extends SettingsPreferenceFragment {
     private static final String TAG = "SystemSettings";
 
-    private static final String KEY_POWER_BUTTON_TORCH = "power_button_torch";
-
-    private CheckBoxPreference mPowerButtonTorch;
     private static final String KEY_LOCK_CLOCK = "lock_clock";
 
     private boolean torchSupported() {
@@ -60,15 +57,6 @@ public class SystemSettings extends SettingsPreferenceFragment {
 
         // Dont display the lock clock preference if its not installed
         removePreferenceIfPackageNotInstalled(findPreference(KEY_LOCK_CLOCK));
-
-        mPowerButtonTorch = (CheckBoxPreference) findPreference(KEY_POWER_BUTTON_TORCH);
-        if (torchSupported()) {
-            mPowerButtonTorch.setChecked((Settings.System.getInt(getActivity().
-                    getApplicationContext().getContentResolver(),
-                    Settings.System.POWER_BUTTON_TORCH, 0) == 1));
-        } else {
-            getPreferenceScreen().removePreference(mPowerButtonTorch);
-        }
     }
 
     @Override
@@ -82,17 +70,6 @@ public class SystemSettings extends SettingsPreferenceFragment {
     }
 
     @Override
-    public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
-        if (preference == mPowerButtonTorch) {
-            boolean enabled = mPowerButtonTorch.isChecked();
-            Settings.System.putInt(getContentResolver(), Settings.System.POWER_BUTTON_TORCH,
-                    enabled ? 1 : 0);
-            return true;
-        } else {
-            return super.onPreferenceTreeClick(preferenceScreen, preference);
-        }
-    }
-
     private boolean removePreferenceIfPackageNotInstalled(Preference preference) {
         String intentUri = ((PreferenceScreen) preference).getIntent().toUri(1);
         Pattern pattern = Pattern.compile("component=([^/]+)/");
