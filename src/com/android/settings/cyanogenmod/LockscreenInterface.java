@@ -49,13 +49,11 @@ public class LockscreenInterface extends SettingsPreferenceFragment implements
         addPreferencesFromResource(R.xml.lockscreen_interface_settings);
 
         mBatteryStatus = (ListPreference) findPreference(KEY_ALWAYS_BATTERY_PREF);
-        mLockscreenHideInitialPageHints = (CheckBoxPreference)findPreference(PREF_LOCKSCREEN_HIDE_INITIAL_PAGE_HINTS);
-        mLockscreenHideInitialPageHints.setChecked(Settings.System.getBoolean(getActivity().getContentResolver(),
-                Settings.System.LOCKSCREEN_HIDE_INITIAL_PAGE_HINTS, false));
-   
         if (mBatteryStatus != null) {
             mBatteryStatus.setOnPreferenceChangeListener(this);
         }
+        mLockscreenHideInitialPageHints = (CheckBoxPreference)findPreference(PREF_LOCKSCREEN_HIDE_INITIAL_PAGE_HINTS);
+            mLockscreenHideInitialPageHints.setOnPreferenceChangeListener(this);
         mMaximizeWidgets = (CheckBoxPreference)findPreference(KEY_LOCKSCREEN_MAXIMIZE_WIDGETS);
         if (Utils.isTablet(getActivity())) {
             getPreferenceScreen().removePreference(mMaximizeWidgets);
@@ -85,17 +83,6 @@ public class LockscreenInterface extends SettingsPreferenceFragment implements
     }
 
     @Override
-    public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
-        if (preference == mLockscreenHideInitialPageHints) {
-            Settings.System.putInt(getActivity().getContentResolver(),
-                    Settings.System.LOCKSCREEN_HIDE_INITIAL_PAGE_HINTS,
-                    ((CheckBoxPreference)preference).isChecked() ? 1 : 0);
-            return true;
-        }
-    return false;
-    }
-
-    @Override
     public boolean onPreferenceChange(Preference preference, Object objValue) {
         ContentResolver cr = getActivity().getContentResolver();
 
@@ -109,7 +96,11 @@ public class LockscreenInterface extends SettingsPreferenceFragment implements
             boolean value = (Boolean) objValue;
             Settings.System.putInt(cr, Settings.System.LOCKSCREEN_MAXIMIZE_WIDGETS, value ? 1 : 0);
             return true;
-
+        } else if (preference == mLockscreenHideInitialPageHints) {
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.LOCKSCREEN_HIDE_INITIAL_PAGE_HINTS,
+                    ((CheckBoxPreference)preference).isChecked() ? 0 : 1);
+            return true;
         }
         return false;
     }
